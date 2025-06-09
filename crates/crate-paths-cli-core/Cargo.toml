@@ -1,0 +1,19 @@
+[package]
+name = "crate-paths-cli-core"
+version = "0.1.0"
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+Inflector = { workspace = true }
+check_keyword = { workspace = true }
+clap = { workspace = true, features = ["derive"] }
+getset = { workspace = true }
+reqwest = { workspace = true, features = ["blocking", "json", "zstd"] }
+# rustdoc-types = { workspace = true }
+scraper = { workspace = true }
+serde = { workspace = true, features = ["derive"] }
+serde_json = { workspace = true }
+strum = { workspace = true, features = ["derive"] }
+thiserror = { workspace = true }
+zstd = { workspace = true }

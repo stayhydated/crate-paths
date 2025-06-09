@@ -1,0 +1,22 @@
+set windows-shell := ["pwsh.exe", "-NoLogo", "-Command"]
+
+default:
+    @just --list
+
+all:
+  just std
+  just serde
+  just tonic
+  just gpui
+
+std:
+  cargo run -p crate-paths-cli -- -c std -o .
+
+serde:
+  cargo run -p crate-paths-cli -- -c serde -o .
+
+tonic:
+  cargo run -p crate-paths-cli -- -c tonic -o .
+
+gpui:
+  cargo run -p crate-paths-cli -- -c gpui -o .
