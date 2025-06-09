@@ -10,12 +10,12 @@ use crate::backend::rustup::error::RustupBackendError;
 
 #[derive(Debug, Error)]
 pub enum BackendError {
-	#[error("Docsrs Backend Error: {0}")]
-	Docsrs(#[from] DocsrsBackendError),
+    #[error("Docsrs Backend Error: {0}")]
+    Docsrs(#[from] DocsrsBackendError),
 
-	#[error("Local Backend Error: {0}")]
-	Local(#[from] LocalBackendError),
+    #[error("Local Backend Error: {0}")]
+    Local(#[from] LocalBackendError),
 
-	#[error("Rustup Backend Error: {0}")]
-	Rustup(#[from] RustupBackendError),
+    #[error("Rustup Backend Error: {0}")]
+    Rustup(#[from] RustupBackendError),
 }

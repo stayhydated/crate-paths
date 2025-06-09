@@ -28,7 +28,7 @@ pub const AnchoredFitMode: crate_paths::Path = crate_paths::Path::new("gpui::Anc
 
 /// pub enum `AnchoredPositionMode`
 pub const AnchoredPositionMode: crate_paths::Path =
-	crate_paths::Path::new("gpui::AnchoredPositionMode");
+    crate_paths::Path::new("gpui::AnchoredPositionMode");
 
 /// pub struct `AnchoredState`
 pub const AnchoredState: crate_paths::Path = crate_paths::Path::new("gpui::AnchoredState");
@@ -95,7 +95,7 @@ pub const AsyncApp: crate_paths::Path = crate_paths::Path::new("gpui::AsyncApp")
 
 /// pub struct `AsyncWindowContext`
 pub const AsyncWindowContext: crate_paths::Path =
-	crate_paths::Path::new("gpui::AsyncWindowContext");
+    crate_paths::Path::new("gpui::AsyncWindowContext");
 
 /// pub enum `AvailableSpace`
 pub const AvailableSpace: crate_paths::Path = crate_paths::Path::new("gpui::AvailableSpace");
@@ -108,7 +108,7 @@ pub const Background: crate_paths::Path = crate_paths::Path::new("gpui::Backgrou
 
 /// pub struct `BackgroundExecutor`
 pub const BackgroundExecutor: crate_paths::Path =
-	crate_paths::Path::new("gpui::BackgroundExecutor");
+    crate_paths::Path::new("gpui::BackgroundExecutor");
 
 /// pub enum `BorderStyle`
 pub const BorderStyle: crate_paths::Path = crate_paths::Path::new("gpui::BorderStyle");
@@ -229,14 +229,14 @@ pub const Element: crate_paths::Path = crate_paths::Path::new("gpui::Element");
 
 /// pub struct `ElementClickedState`
 pub const ElementClickedState: crate_paths::Path =
-	crate_paths::Path::new("gpui::ElementClickedState");
+    crate_paths::Path::new("gpui::ElementClickedState");
 
 /// pub enum `ElementId`
 pub const ElementId: crate_paths::Path = crate_paths::Path::new("gpui::ElementId");
 
 /// pub struct `ElementInputHandler`
 pub const ElementInputHandler: crate_paths::Path =
-	crate_paths::Path::new("gpui::ElementInputHandler");
+    crate_paths::Path::new("gpui::ElementInputHandler");
 
 /// pub struct `Empty`
 pub const Empty: crate_paths::Path = crate_paths::Path::new("gpui::Empty");
@@ -252,7 +252,7 @@ pub const EntityId: crate_paths::Path = crate_paths::Path::new("gpui::EntityId")
 
 /// pub trait `EntityInputHandler`
 pub const EntityInputHandler: crate_paths::Path =
-	crate_paths::Path::new("gpui::EntityInputHandler");
+    crate_paths::Path::new("gpui::EntityInputHandler");
 
 /// pub trait `EventEmitter`
 pub const EventEmitter: crate_paths::Path = crate_paths::Path::new("gpui::EventEmitter");
@@ -262,7 +262,7 @@ pub const ExternalPaths: crate_paths::Path = crate_paths::Path::new("gpui::Exter
 
 /// pub struct `FallbackPromptRenderer`
 pub const FallbackPromptRenderer: crate_paths::Path =
-	crate_paths::Path::new("gpui::FallbackPromptRenderer");
+    crate_paths::Path::new("gpui::FallbackPromptRenderer");
 
 /// pub enum `FileDropEvent`
 pub const FileDropEvent: crate_paths::Path = crate_paths::Path::new("gpui::FileDropEvent");
@@ -332,7 +332,7 @@ pub const FontWeight: crate_paths::Path = crate_paths::Path::new("gpui::FontWeig
 
 /// pub struct `ForegroundExecutor`
 pub const ForegroundExecutor: crate_paths::Path =
-	crate_paths::Path::new("gpui::ForegroundExecutor");
+    crate_paths::Path::new("gpui::ForegroundExecutor");
 
 /// pub trait `Global`
 pub const Global: crate_paths::Path = crate_paths::Path::new("gpui::Global");
@@ -387,7 +387,7 @@ pub const ImageCacheItem: crate_paths::Path = crate_paths::Path::new("gpui::Imag
 
 /// pub trait `ImageCacheProvider`
 pub const ImageCacheProvider: crate_paths::Path =
-	crate_paths::Path::new("gpui::ImageCacheProvider");
+    crate_paths::Path::new("gpui::ImageCacheProvider");
 
 /// pub enum `ImageFormat`
 pub const ImageFormat: crate_paths::Path = crate_paths::Path::new("gpui::ImageFormat");
@@ -427,22 +427,22 @@ pub const Inspector: crate_paths::Path = crate_paths::Path::new("gpui::Inspector
 
 /// pub struct `InspectorElementId`
 pub const InspectorElementId: crate_paths::Path =
-	crate_paths::Path::new("gpui::InspectorElementId");
+    crate_paths::Path::new("gpui::InspectorElementId");
 
 /// pub struct `InspectorElementPath`
 pub const InspectorElementPath: crate_paths::Path =
-	crate_paths::Path::new("gpui::InspectorElementPath");
+    crate_paths::Path::new("gpui::InspectorElementPath");
 
 /// pub type alias `InspectorRenderer`
 pub const InspectorRenderer: crate_paths::Path = crate_paths::Path::new("gpui::InspectorRenderer");
 
 /// pub trait `InteractiveElement`
 pub const InteractiveElement: crate_paths::Path =
-	crate_paths::Path::new("gpui::InteractiveElement");
+    crate_paths::Path::new("gpui::InteractiveElement");
 
 /// pub struct `InteractiveElementState`
 pub const InteractiveElementState: crate_paths::Path =
-	crate_paths::Path::new("gpui::InteractiveElementState");
+    crate_paths::Path::new("gpui::InteractiveElementState");
 
 /// pub struct `InteractiveText`
 pub const InteractiveText: crate_paths::Path = crate_paths::Path::new("gpui::InteractiveText");
@@ -455,7 +455,7 @@ pub const IntoElement: crate_paths::Path = crate_paths::Path::new("gpui::IntoEle
 
 /// pub struct `InvalidKeystrokeError`
 pub const InvalidKeystrokeError: crate_paths::Path =
-	crate_paths::Path::new("gpui::InvalidKeystrokeError");
+    crate_paths::Path::new("gpui::InvalidKeystrokeError");
 
 /// pub trait `IsEmpty`
 pub const IsEmpty: crate_paths::Path = crate_paths::Path::new("gpui::IsEmpty");
@@ -477,14 +477,14 @@ pub const JustifySelf: crate_paths::Path = crate_paths::Path::new("gpui::Justify
 
 /// pub constant `KEYSTROKE_PARSE_EXPECTED_MESSAGE`
 pub const KEYSTROKE_PARSE_EXPECTED_MESSAGE: crate_paths::Path =
-	crate_paths::Path::new("gpui::KEYSTROKE_PARSE_EXPECTED_MESSAGE");
+    crate_paths::Path::new("gpui::KEYSTROKE_PARSE_EXPECTED_MESSAGE");
 
 /// pub struct `KeyBinding`
 pub const KeyBinding: crate_paths::Path = crate_paths::Path::new("gpui::KeyBinding");
 
 /// pub enum `KeyBindingContextPredicate`
 pub const KeyBindingContextPredicate: crate_paths::Path =
-	crate_paths::Path::new("gpui::KeyBindingContextPredicate");
+    crate_paths::Path::new("gpui::KeyBindingContextPredicate");
 
 /// pub struct `KeyContext`
 pub const KeyContext: crate_paths::Path = crate_paths::Path::new("gpui::KeyContext");
@@ -542,7 +542,7 @@ pub const ListAlignment: crate_paths::Path = crate_paths::Path::new("gpui::ListA
 
 /// pub enum `ListHorizontalSizingBehavior`
 pub const ListHorizontalSizingBehavior: crate_paths::Path =
-	crate_paths::Path::new("gpui::ListHorizontalSizingBehavior");
+    crate_paths::Path::new("gpui::ListHorizontalSizingBehavior");
 
 /// pub struct `ListOffset`
 pub const ListOffset: crate_paths::Path = crate_paths::Path::new("gpui::ListOffset");
@@ -555,7 +555,7 @@ pub const ListScrollEvent: crate_paths::Path = crate_paths::Path::new("gpui::Lis
 
 /// pub enum `ListSizingBehavior`
 pub const ListSizingBehavior: crate_paths::Path =
-	crate_paths::Path::new("gpui::ListSizingBehavior");
+    crate_paths::Path::new("gpui::ListSizingBehavior");
 
 /// pub struct `ListState`
 pub const ListState: crate_paths::Path = crate_paths::Path::new("gpui::ListState");
@@ -574,7 +574,7 @@ pub const Modifiers: crate_paths::Path = crate_paths::Path::new("gpui::Modifiers
 
 /// pub struct `ModifiersChangedEvent`
 pub const ModifiersChangedEvent: crate_paths::Path =
-	crate_paths::Path::new("gpui::ModifiersChangedEvent");
+    crate_paths::Path::new("gpui::ModifiersChangedEvent");
 
 /// pub enum `MouseButton`
 pub const MouseButton: crate_paths::Path = crate_paths::Path::new("gpui::MouseButton");
@@ -596,7 +596,7 @@ pub const MouseUpEvent: crate_paths::Path = crate_paths::Path::new("gpui::MouseU
 
 /// pub enum `NavigationDirection`
 pub const NavigationDirection: crate_paths::Path =
-	crate_paths::Path::new("gpui::NavigationDirection");
+    crate_paths::Path::new("gpui::NavigationDirection");
 
 /// pub trait `Negate`
 pub const Negate: crate_paths::Path = crate_paths::Path::new("gpui::Negate");
@@ -651,7 +651,7 @@ pub const PlatformInput: crate_paths::Path = crate_paths::Path::new("gpui::Platf
 
 /// pub trait `PlatformKeyboardLayout`
 pub const PlatformKeyboardLayout: crate_paths::Path =
-	crate_paths::Path::new("gpui::PlatformKeyboardLayout");
+    crate_paths::Path::new("gpui::PlatformKeyboardLayout");
 
 /// pub struct `Point`
 pub const Point: crate_paths::Path = crate_paths::Path::new("gpui::Point");
@@ -700,7 +700,7 @@ pub const RenderOnce: crate_paths::Path = crate_paths::Path::new("gpui::RenderOn
 
 /// pub struct `RenderablePromptHandle`
 pub const RenderablePromptHandle: crate_paths::Path =
-	crate_paths::Path::new("gpui::RenderablePromptHandle");
+    crate_paths::Path::new("gpui::RenderablePromptHandle");
 
 /// pub struct `Reservation`
 pub const Reservation: crate_paths::Path = crate_paths::Path::new("gpui::Reservation");
@@ -716,11 +716,11 @@ pub const Result: crate_paths::Path = crate_paths::Path::new("gpui::Result");
 
 /// pub struct `RetainAllImageCache`
 pub const RetainAllImageCache: crate_paths::Path =
-	crate_paths::Path::new("gpui::RetainAllImageCache");
+    crate_paths::Path::new("gpui::RetainAllImageCache");
 
 /// pub struct `RetainAllImageCacheProvider`
 pub const RetainAllImageCacheProvider: crate_paths::Path =
-	crate_paths::Path::new("gpui::RetainAllImageCacheProvider");
+    crate_paths::Path::new("gpui::RetainAllImageCacheProvider");
 
 /// pub struct `Rgba`
 pub const Rgba: crate_paths::Path = crate_paths::Path::new("gpui::Rgba");
@@ -736,15 +736,15 @@ pub const Scope: crate_paths::Path = crate_paths::Path::new("gpui::Scope");
 
 /// pub struct `ScreenCaptureFrame`
 pub const ScreenCaptureFrame: crate_paths::Path =
-	crate_paths::Path::new("gpui::ScreenCaptureFrame");
+    crate_paths::Path::new("gpui::ScreenCaptureFrame");
 
 /// pub trait `ScreenCaptureSource`
 pub const ScreenCaptureSource: crate_paths::Path =
-	crate_paths::Path::new("gpui::ScreenCaptureSource");
+    crate_paths::Path::new("gpui::ScreenCaptureSource");
 
 /// pub trait `ScreenCaptureStream`
 pub const ScreenCaptureStream: crate_paths::Path =
-	crate_paths::Path::new("gpui::ScreenCaptureStream");
+    crate_paths::Path::new("gpui::ScreenCaptureStream");
 
 /// pub struct `ScrollAnchor`
 pub const ScrollAnchor: crate_paths::Path = crate_paths::Path::new("gpui::ScrollAnchor");
@@ -790,15 +790,15 @@ pub const Stateful: crate_paths::Path = crate_paths::Path::new("gpui::Stateful")
 
 /// pub trait `StatefulInteractiveElement`
 pub const StatefulInteractiveElement: crate_paths::Path =
-	crate_paths::Path::new("gpui::StatefulInteractiveElement");
+    crate_paths::Path::new("gpui::StatefulInteractiveElement");
 
 /// pub struct `StrikethroughStyle`
 pub const StrikethroughStyle: crate_paths::Path =
-	crate_paths::Path::new("gpui::StrikethroughStyle");
+    crate_paths::Path::new("gpui::StrikethroughStyle");
 
 /// pub struct `StrikethroughStyleRefinement`
 pub const StrikethroughStyleRefinement: crate_paths::Path =
-	crate_paths::Path::new("gpui::StrikethroughStyleRefinement");
+    crate_paths::Path::new("gpui::StrikethroughStyleRefinement");
 
 /// pub struct `StrokeOptions`
 pub const StrokeOptions: crate_paths::Path = crate_paths::Path::new("gpui::StrokeOptions");
@@ -853,7 +853,7 @@ pub const TextStyle: crate_paths::Path = crate_paths::Path::new("gpui::TextStyle
 
 /// pub struct `TextStyleRefinement`
 pub const TextStyleRefinement: crate_paths::Path =
-	crate_paths::Path::new("gpui::TextStyleRefinement");
+    crate_paths::Path::new("gpui::TextStyleRefinement");
 
 /// pub struct `TextSystem`
 pub const TextSystem: crate_paths::Path = crate_paths::Path::new("gpui::TextSystem");
@@ -881,7 +881,7 @@ pub const Transformation: crate_paths::Path = crate_paths::Path::new("gpui::Tran
 
 /// pub struct `TransformationMatrix`
 pub const TransformationMatrix: crate_paths::Path =
-	crate_paths::Path::new("gpui::TransformationMatrix");
+    crate_paths::Path::new("gpui::TransformationMatrix");
 
 /// pub struct `UTF16Selection`
 pub const UTF16Selection: crate_paths::Path = crate_paths::Path::new("gpui::UTF16Selection");
@@ -891,26 +891,26 @@ pub const UnderlineStyle: crate_paths::Path = crate_paths::Path::new("gpui::Unde
 
 /// pub struct `UnderlineStyleRefinement`
 pub const UnderlineStyleRefinement: crate_paths::Path =
-	crate_paths::Path::new("gpui::UnderlineStyleRefinement");
+    crate_paths::Path::new("gpui::UnderlineStyleRefinement");
 
 /// pub struct `UniformList`
 pub const UniformList: crate_paths::Path = crate_paths::Path::new("gpui::UniformList");
 
 /// pub trait `UniformListDecoration`
 pub const UniformListDecoration: crate_paths::Path =
-	crate_paths::Path::new("gpui::UniformListDecoration");
+    crate_paths::Path::new("gpui::UniformListDecoration");
 
 /// pub struct `UniformListFrameState`
 pub const UniformListFrameState: crate_paths::Path =
-	crate_paths::Path::new("gpui::UniformListFrameState");
+    crate_paths::Path::new("gpui::UniformListFrameState");
 
 /// pub struct `UniformListScrollHandle`
 pub const UniformListScrollHandle: crate_paths::Path =
-	crate_paths::Path::new("gpui::UniformListScrollHandle");
+    crate_paths::Path::new("gpui::UniformListScrollHandle");
 
 /// pub struct `UniformListScrollState`
 pub const UniformListScrollState: crate_paths::Path =
-	crate_paths::Path::new("gpui::UniformListScrollState");
+    crate_paths::Path::new("gpui::UniformListScrollState");
 
 /// pub trait `UpdateGlobal`
 pub const UpdateGlobal: crate_paths::Path = crate_paths::Path::new("gpui::UpdateGlobal");
@@ -938,7 +938,7 @@ pub const WindowAppearance: crate_paths::Path = crate_paths::Path::new("gpui::Wi
 
 /// pub enum `WindowBackgroundAppearance`
 pub const WindowBackgroundAppearance: crate_paths::Path =
-	crate_paths::Path::new("gpui::WindowBackgroundAppearance");
+    crate_paths::Path::new("gpui::WindowBackgroundAppearance");
 
 /// pub enum `WindowBounds`
 pub const WindowBounds: crate_paths::Path = crate_paths::Path::new("gpui::WindowBounds");
@@ -978,7 +978,7 @@ pub const action_as: crate_paths::Path = crate_paths::Path::new("gpui::action_as
 
 /// pub macro `action_with_deprecated_aliases`
 pub const action_with_deprecated_aliases: crate_paths::Path =
-	crate_paths::Path::new("gpui::action_with_deprecated_aliases");
+    crate_paths::Path::new("gpui::action_with_deprecated_aliases");
 
 /// pub macro `actions`
 pub const actions: crate_paths::Path = crate_paths::Path::new("gpui::actions");
@@ -991,7 +991,7 @@ pub const auto: crate_paths::Path = crate_paths::Path::new("gpui::auto");
 
 /// pub function `background_executor`
 pub const background_executor: crate_paths::Path =
-	crate_paths::Path::new("gpui::background_executor");
+    crate_paths::Path::new("gpui::background_executor");
 
 /// pub function `black`
 pub const black: crate_paths::Path = crate_paths::Path::new("gpui::black");
@@ -1001,7 +1001,7 @@ pub const blue: crate_paths::Path = crate_paths::Path::new("gpui::blue");
 
 /// pub macro `border_style_methods`
 pub const border_style_methods: crate_paths::Path =
-	crate_paths::Path::new("gpui::border_style_methods");
+    crate_paths::Path::new("gpui::border_style_methods");
 
 /// pub function `bounce`
 pub const bounce: crate_paths::Path = crate_paths::Path::new("gpui::bounce");
@@ -1011,21 +1011,21 @@ pub const bounds: crate_paths::Path = crate_paths::Path::new("gpui::bounds");
 
 /// pub macro `box_shadow_style_methods`
 pub const box_shadow_style_methods: crate_paths::Path =
-	crate_paths::Path::new("gpui::box_shadow_style_methods");
+    crate_paths::Path::new("gpui::box_shadow_style_methods");
 
 /// pub function `canvas`
 pub const canvas: crate_paths::Path = crate_paths::Path::new("gpui::canvas");
 
 /// pub function `combine_highlights`
 pub const combine_highlights: crate_paths::Path =
-	crate_paths::Path::new("gpui::combine_highlights");
+    crate_paths::Path::new("gpui::combine_highlights");
 
 /// pub proc attribute `ctor`
 pub const ctor: crate_paths::Path = crate_paths::Path::new("gpui::ctor");
 
 /// pub macro `cursor_style_methods`
 pub const cursor_style_methods: crate_paths::Path =
-	crate_paths::Path::new("gpui::cursor_style_methods");
+    crate_paths::Path::new("gpui::cursor_style_methods");
 
 /// pub function `deferred`
 pub const deferred: crate_paths::Path = crate_paths::Path::new("gpui::deferred");
@@ -1041,7 +1041,7 @@ pub const ease_out_quint: crate_paths::Path = crate_paths::Path::new("gpui::ease
 
 /// pub function `fallback_prompt_renderer`
 pub const fallback_prompt_renderer: crate_paths::Path =
-	crate_paths::Path::new("gpui::fallback_prompt_renderer");
+    crate_paths::Path::new("gpui::fallback_prompt_renderer");
 
 /// pub function `fill`
 pub const fill: crate_paths::Path = crate_paths::Path::new("gpui::fill");
@@ -1072,14 +1072,14 @@ pub const impl_action_as: crate_paths::Path = crate_paths::Path::new("gpui::impl
 
 /// pub macro `impl_action_with_deprecated_aliases`
 pub const impl_action_with_deprecated_aliases: crate_paths::Path =
-	crate_paths::Path::new("gpui::impl_action_with_deprecated_aliases");
+    crate_paths::Path::new("gpui::impl_action_with_deprecated_aliases");
 
 /// pub macro `impl_actions`
 pub const impl_actions: crate_paths::Path = crate_paths::Path::new("gpui::impl_actions");
 
 /// pub macro `impl_internal_actions`
 pub const impl_internal_actions: crate_paths::Path =
-	crate_paths::Path::new("gpui::impl_internal_actions");
+    crate_paths::Path::new("gpui::impl_internal_actions");
 
 /// pub function `is_no_action`
 pub const is_no_action: crate_paths::Path = crate_paths::Path::new("gpui::is_no_action");
@@ -1098,7 +1098,7 @@ pub const list: crate_paths::Path = crate_paths::Path::new("gpui::list");
 
 /// pub macro `margin_style_methods`
 pub const margin_style_methods: crate_paths::Path =
-	crate_paths::Path::new("gpui::margin_style_methods");
+    crate_paths::Path::new("gpui::margin_style_methods");
 
 /// pub function `opaque_grey`
 pub const opaque_grey: crate_paths::Path = crate_paths::Path::new("gpui::opaque_grey");
@@ -1108,11 +1108,11 @@ pub const outline: crate_paths::Path = crate_paths::Path::new("gpui::outline");
 
 /// pub macro `overflow_style_methods`
 pub const overflow_style_methods: crate_paths::Path =
-	crate_paths::Path::new("gpui::overflow_style_methods");
+    crate_paths::Path::new("gpui::overflow_style_methods");
 
 /// pub macro `padding_style_methods`
 pub const padding_style_methods: crate_paths::Path =
-	crate_paths::Path::new("gpui::padding_style_methods");
+    crate_paths::Path::new("gpui::padding_style_methods");
 
 /// pub function `pattern_slash`
 pub const pattern_slash: crate_paths::Path = crate_paths::Path::new("gpui::pattern_slash");
@@ -1128,7 +1128,7 @@ pub const point: crate_paths::Path = crate_paths::Path::new("gpui::point");
 
 /// pub macro `position_style_methods`
 pub const position_style_methods: crate_paths::Path =
-	crate_paths::Path::new("gpui::position_style_methods");
+    crate_paths::Path::new("gpui::position_style_methods");
 
 /// pub function `pulsating_between`
 pub const pulsating_between: crate_paths::Path = crate_paths::Path::new("gpui::pulsating_between");
@@ -1192,7 +1192,7 @@ pub const uniform_list: crate_paths::Path = crate_paths::Path::new("gpui::unifor
 
 /// pub macro `visibility_style_methods`
 pub const visibility_style_methods: crate_paths::Path =
-	crate_paths::Path::new("gpui::visibility_style_methods");
+    crate_paths::Path::new("gpui::visibility_style_methods");
 
 /// pub function `white`
 pub const white: crate_paths::Path = crate_paths::Path::new("gpui::white");
@@ -1200,47 +1200,47 @@ pub const white: crate_paths::Path = crate_paths::Path::new("gpui::white");
 /// pub function `yellow`
 pub const yellow: crate_paths::Path = crate_paths::Path::new("gpui::yellow");
 pub mod colors {
-	/// pub struct `Colors`
-	pub const Colors: crate_paths::Path = crate_paths::Path::new("gpui::colors::Colors");
+    /// pub struct `Colors`
+    pub const Colors: crate_paths::Path = crate_paths::Path::new("gpui::colors::Colors");
 
-	/// pub enum `DefaultAppearance`
-	pub const DefaultAppearance: crate_paths::Path =
-		crate_paths::Path::new("gpui::colors::DefaultAppearance");
+    /// pub enum `DefaultAppearance`
+    pub const DefaultAppearance: crate_paths::Path =
+        crate_paths::Path::new("gpui::colors::DefaultAppearance");
 
-	/// pub trait `DefaultColors`
-	pub const DefaultColors: crate_paths::Path =
-		crate_paths::Path::new("gpui::colors::DefaultColors");
+    /// pub trait `DefaultColors`
+    pub const DefaultColors: crate_paths::Path =
+        crate_paths::Path::new("gpui::colors::DefaultColors");
 
-	/// pub struct `GlobalColors`
-	pub const GlobalColors: crate_paths::Path =
-		crate_paths::Path::new("gpui::colors::GlobalColors");
+    /// pub struct `GlobalColors`
+    pub const GlobalColors: crate_paths::Path =
+        crate_paths::Path::new("gpui::colors::GlobalColors");
 }
 pub mod inspector_reflection {
-	/// pub struct `FunctionReflection`
-	pub const FunctionReflection: crate_paths::Path =
-		crate_paths::Path::new("gpui::inspector_reflection::FunctionReflection");
+    /// pub struct `FunctionReflection`
+    pub const FunctionReflection: crate_paths::Path =
+        crate_paths::Path::new("gpui::inspector_reflection::FunctionReflection");
 }
 pub mod prelude {
-	/// pub trait `FluentBuilder`
-	pub const FluentBuilder: crate_paths::Path =
-		crate_paths::Path::new("gpui::prelude::FluentBuilder");
+    /// pub trait `FluentBuilder`
+    pub const FluentBuilder: crate_paths::Path =
+        crate_paths::Path::new("gpui::prelude::FluentBuilder");
 
-	/// pub proc derive `IntoElement`
-	pub const IntoElement: crate_paths::Path = crate_paths::Path::new("gpui::prelude::IntoElement");
+    /// pub proc derive `IntoElement`
+    pub const IntoElement: crate_paths::Path = crate_paths::Path::new("gpui::prelude::IntoElement");
 
-	/// pub trait + proc derive `Refineable`
-	pub const Refineable: crate_paths::Path = crate_paths::Path::new("gpui::prelude::Refineable");
+    /// pub trait + proc derive `Refineable`
+    pub const Refineable: crate_paths::Path = crate_paths::Path::new("gpui::prelude::Refineable");
 
-	/// pub proc derive `VisualContext`
-	pub const VisualContext: crate_paths::Path =
-		crate_paths::Path::new("gpui::prelude::VisualContext");
+    /// pub proc derive `VisualContext`
+    pub const VisualContext: crate_paths::Path =
+        crate_paths::Path::new("gpui::prelude::VisualContext");
 }
 pub mod styled_reflection {
-	/// pub function `find_method`
-	pub const find_method: crate_paths::Path =
-		crate_paths::Path::new("gpui::styled_reflection::find_method");
+    /// pub function `find_method`
+    pub const find_method: crate_paths::Path =
+        crate_paths::Path::new("gpui::styled_reflection::find_method");
 
-	/// pub function `methods`
-	pub const methods: crate_paths::Path =
-		crate_paths::Path::new("gpui::styled_reflection::methods");
+    /// pub function `methods`
+    pub const methods: crate_paths::Path =
+        crate_paths::Path::new("gpui::styled_reflection::methods");
 }
