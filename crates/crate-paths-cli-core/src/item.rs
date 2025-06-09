@@ -31,7 +31,7 @@ impl ItemEntry {
     }
 
     pub fn full_path(&self) -> String {
-        format!("{}::{}", self.crate_name, self.path)
+        format!("{}::{}", self.crate_name.to_snake_case(), self.path)
     }
 
     pub fn into_writable(&self) -> String {

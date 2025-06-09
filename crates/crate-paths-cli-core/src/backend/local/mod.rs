@@ -5,6 +5,7 @@ use super::LocalBackendError;
 use crate::error::CoreError;
 use crate::item::ItemEntry;
 use crate::parser;
+use inflector::Inflector as _;
 use std::path::PathBuf;
 use std::process::Command;
 
@@ -40,15 +41,22 @@ fn fetch_crate_all_items_html(crate_name: &str) -> Result<String, LocalBackendEr
         .parent()
         .ok_or_else(|| LocalBackendError::WorkspaceRootNotFound(cargo_toml_path.clone()))?;
 
-    let doc_file_path = workspace_root
-        .join("target")
-        .join("doc")
-        .join(crate_name)
-        .join("all.html");
+    let base_doc_path = workspace_root.join("target").join("doc");
+    let possible_names = [crate_name, &crate_name.to_snake_case()];
 
-    if !doc_file_path.exists() {
-        return Err(LocalBackendError::DocFileNotFound(doc_file_path));
+    for name in &possible_names {
+        print!("OMG {}", name);
     }
+
+    const ALL_HTML: &str = "all.html";
+
+    let doc_file_path = possible_names
+        .iter()
+        .map(|name| base_doc_path.join(name).join(ALL_HTML))
+        .find(|path| path.exists())
+        .ok_or_else(|| {
+            LocalBackendError::DocFileNotFound(base_doc_path.join(crate_name).join(ALL_HTML))
+        })?;
 
     std::fs::read_to_string(&doc_file_path)
         .map_err(|e| LocalBackendError::FileRead(doc_file_path.clone(), e))

@@ -1,9 +1,9 @@
 [package]
-name = "gpui-crate-paths"
+name = "gpui-component-crate-paths"
 version = "0.1.0"
+categories.workspace = true
 edition.workspace = true
 license = "Unlicense"
-publish = false
 
 [dependencies]
 crate-paths.workspace = true

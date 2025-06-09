@@ -20,3 +20,4 @@ tonic:
 
 gpui:
   cargo run -p crate-paths-cli -- -c gpui -o .
+  cargo run -p crate-paths-cli -- -c gpui-component -o .
