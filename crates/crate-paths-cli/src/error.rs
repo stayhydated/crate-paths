@@ -4,8 +4,8 @@ use thiserror::Error;
 
 #[derive(Debug, Error)]
 pub enum CratePathCliError {
-	#[error("core error: {0}")]
-	Core(#[from] CoreError),
-	#[error("writer error: {0}")]
-	Writer(#[from] WriterError),
+    #[error("core error: {0}")]
+    Core(#[from] CoreError),
+    #[error("writer error: {0}")]
+    Writer(#[from] WriterError),
 }

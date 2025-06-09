@@ -7,17 +7,17 @@ use derive_more::Display;
 pub struct Path<'a>(&'a str);
 
 impl<'a> Path<'a> {
-	pub const fn new(path: &'a str) -> Self {
-		Path(path)
-	}
+    pub const fn new(path: &'a str) -> Self {
+        Path(path)
+    }
 }
 
 impl quote::ToTokens for Path<'_> {
-	fn to_tokens(&self, tokens: &mut proc_macro2::TokenStream) {
-		let parsed: syn::Path = syn::parse_str(self.0).unwrap();
-		parsed.to_tokens(tokens);
-	}
+    fn to_tokens(&self, tokens: &mut proc_macro2::TokenStream) {
+        let parsed: syn::Path = syn::parse_str(self.0).unwrap();
+        parsed.to_tokens(tokens);
+    }
 }
 
 #[cfg(feature = "macro")]
-pub use crate_paths_macro::*;
+pub use crate_paths_macros::*;

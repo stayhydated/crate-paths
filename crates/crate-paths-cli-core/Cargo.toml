@@ -7,13 +7,16 @@ license.workspace = true
 [dependencies]
 Inflector = { workspace = true }
 check_keyword = { workspace = true }
-clap = { workspace = true, features = ["derive"] }
+clap = { features = [ "derive" ], workspace = true }
 getset = { workspace = true }
-reqwest = { workspace = true, features = ["blocking", "json", "zstd"] }
+reqwest = { features = [ "blocking", "json", "zstd" ], workspace = true }
 # rustdoc-types = { workspace = true }
 scraper = { workspace = true }
-serde = { workspace = true, features = ["derive"] }
+serde = { features = [ "derive" ], workspace = true }
 serde_json = { workspace = true }
-strum = { workspace = true, features = ["derive"] }
+strum = { features = [ "derive" ], workspace = true }
 thiserror = { workspace = true }
 zstd = { workspace = true }
+
+[lints]
+workspace = true

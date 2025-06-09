@@ -1,0 +1,12 @@
+[workspace]
+changelog_update = true
+
+[[package]]
+changelog_include = [ "crate-paths-cli-core" ]
+changelog_update = true
+name = "crate-paths-cli"
+
+[[package]]
+changelog_include = [ "crate-paths-macros" ]
+changelog_update = true
+name = "crate-paths"

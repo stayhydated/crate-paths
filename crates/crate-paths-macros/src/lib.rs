@@ -19,7 +19,7 @@ use proc_macro::TokenStream;
 /// ```
 #[proc_macro]
 pub fn path(input: TokenStream) -> TokenStream {
-	impls::path(input)
+    impls::path(input)
 }
 
 /// Usage:
@@ -46,5 +46,5 @@ pub fn path(input: TokenStream) -> TokenStream {
 /// ```
 #[proc_macro]
 pub fn path_val(input: TokenStream) -> TokenStream {
-	impls::path_val(input)
+    impls::path_val(input)
 }
