@@ -20,4 +20,4 @@ impl quote::ToTokens for Path<'_> {
 }
 
 #[cfg(feature = "macro")]
-pub use crate_paths_macro::*;
+pub use crate_paths_macros::*;

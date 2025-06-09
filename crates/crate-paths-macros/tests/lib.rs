@@ -1,6 +1,6 @@
 #[cfg(test)]
 mod tests {
-    use crate_paths_macro::{path, path_val};
+    use crate_paths_macros::{path, path_val};
     use quote::{ToTokens as _, quote};
 
     path!(std::sync::Arc);

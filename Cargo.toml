@@ -3,7 +3,7 @@ members = [
   "crates/crate-paths",
   "crates/crate-paths-cli",
   "crates/crate-paths-cli-core",
-  "crates/crate-paths-macro",
+  "crates/crate-paths-macros",
   "crates/dummy-consumer-lib",
   "tests-paths/gpui-crate-paths",
   "tests-paths/serde-crate-paths",
@@ -23,7 +23,7 @@ check_keyword = "0.4.1"
 clap = "4.5.39"
 crate-paths = { path = "crates/crate-paths" }
 crate-paths-cli-core = { path = "crates/crate-paths-cli-core" }
-crate-paths-macro = { path = "crates/crate-paths-macro" }
+crate-paths-macros = { path = "crates/crate-paths-macros" }
 derive_more = "2.0.1"
 getset = "0.1.5"
 prettyplease = "0.2.33"

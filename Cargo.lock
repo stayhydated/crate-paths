@@ -1145,7 +1145,7 @@ dependencies = [
 name = "crate-paths"
 version = "0.1.0"
 dependencies = [
- "crate-paths-macro",
+ "crate-paths-macros",
  "derive_more 2.0.1",
  "proc-macro2",
  "quote",
@@ -1181,7 +1181,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "crate-paths-macro"
+name = "crate-paths-macros"
 version = "0.1.0"
 dependencies = [
  "check_keyword",

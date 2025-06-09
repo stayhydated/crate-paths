@@ -8,10 +8,10 @@ keywords = [ "syn", "path" ]
 
 [features]
 default = [  ]
-macro = [ "dep:crate-paths-macro" ]
+macros = [ "dep:crate-paths-macros" ]
 
 [dependencies]
-crate-paths-macro = { optional = true, workspace = true }
+crate-paths-macros = { optional = true, workspace = true }
 derive_more = { features = [ "display" ], workspace = true }
 proc-macro2 = { workspace = true }
 quote = { workspace = true }
