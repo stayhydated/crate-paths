@@ -1,7 +1,7 @@
 use crate::item::ItemEntry;
 use std::{
     collections::BTreeMap,
-    io::Write,
+    io::Write as _,
     process::{Command, Stdio},
 };
 

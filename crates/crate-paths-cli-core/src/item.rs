@@ -1,7 +1,7 @@
 use crate::item_kind::ItemKind;
-use check_keyword::CheckKeyword;
+use check_keyword::CheckKeyword as _;
 use getset::Getters;
-use inflector::Inflector;
+use inflector::Inflector as _;
 use serde::{Deserialize, Serialize};
 
 #[derive(Clone, Debug, Deserialize, Eq, Getters, Hash, PartialEq, Serialize)]

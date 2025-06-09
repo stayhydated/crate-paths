@@ -46,4 +46,4 @@ unexpected_cfgs = { level = "allow" }
 [workspace.lints.clippy]
 dbg_macro = "deny"
 todo = "deny"
-unused_trait_names = "deny"
+unused_trait_names = "warn"

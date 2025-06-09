@@ -6,7 +6,7 @@ use crate::item::ItemEntry;
 use crate::parser;
 use error::DocsrsBackendError;
 use reqwest::blocking::Client;
-use std::io::Read;
+use std::io::Read as _;
 use zstd::Decoder as ZstdDecoder;
 
 fn fetch_crate_all_items_html(
