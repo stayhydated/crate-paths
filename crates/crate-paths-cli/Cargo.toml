@@ -1,8 +1,13 @@
 [package]
 name = "crate-paths-cli"
+description = """
+    Cli that builds a tree of a crate's item paths
+"""
+readme = "README.md"
 version = "0.1.0"
 edition.workspace = true
 license.workspace = true
+repository.workspace = true
 categories.workspace = true
 keywords = [ "syn", "path", "crate" ]
 
