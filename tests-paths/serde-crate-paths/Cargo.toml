@@ -7,3 +7,6 @@ publish = false
 
 [dependencies]
 crate-paths.workspace = true
+
+[lints]
+workspace = true

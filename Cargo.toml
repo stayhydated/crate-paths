@@ -5,7 +5,7 @@ members = [
   "crates/crate-paths-cli",
   "crates/crate-paths-cli-core",
   "crates/crate-paths-macros",
-  "crates/dummy-consumer-lib",
+  "crates/dummy-consumer-lib", "tests-paths/gpui-component-crate-paths",
   "tests-paths/gpui-crate-paths",
   "tests-paths/serde-crate-paths",
   "tests-paths/std-crate-paths",

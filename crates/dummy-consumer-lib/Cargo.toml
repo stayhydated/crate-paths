@@ -7,3 +7,4 @@ publish = false
 
 [dependencies]
 gpui = { git = "https://github.com/zed-industries/zed.git", rev = "06a199da4d8a147c7867f4c82ffafed4974bea24" }
+gpui-component = { git = "https://github.com/longbridge/gpui-component.git" }
