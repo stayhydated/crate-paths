@@ -48,12 +48,14 @@ fn fetch_crate_all_items_html(crate_name: &str) -> Result<String, LocalBackendEr
         print!("OMG {}", name);
     }
 
+    const ALL_HTML: &str = "all.html";
+
     let doc_file_path = possible_names
         .iter()
-        .map(|name| base_doc_path.join(name).join("all.html"))
+        .map(|name| base_doc_path.join(name).join(ALL_HTML))
         .find(|path| path.exists())
         .ok_or_else(|| {
-            LocalBackendError::DocFileNotFound(base_doc_path.join(crate_name).join("all.html"))
+            LocalBackendError::DocFileNotFound(base_doc_path.join(crate_name).join(ALL_HTML))
         })?;
 
     std::fs::read_to_string(&doc_file_path)
