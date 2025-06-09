@@ -44,10 +44,6 @@ fn fetch_crate_all_items_html(crate_name: &str) -> Result<String, LocalBackendEr
     let base_doc_path = workspace_root.join("target").join("doc");
     let possible_names = [crate_name, &crate_name.to_snake_case()];
 
-    for name in &possible_names {
-        print!("OMG {}", name);
-    }
-
     const ALL_HTML: &str = "all.html";
 
     let doc_file_path = possible_names
