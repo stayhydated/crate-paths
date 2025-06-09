@@ -2,7 +2,7 @@
 name = "serde-crate-paths"
 version = "0.1.0"
 edition.workspace = true
-license.workspace = true
+license = "Unlicense"
 publish = false
 
 [dependencies]
