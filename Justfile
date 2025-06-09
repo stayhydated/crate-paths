@@ -4,9 +4,9 @@ default:
     @just --list
 
 fmt:
-    cargo sort -w
     cargo sort-derives
     cargo fmt
+    taplo fmt
 
 test:
   cargo test
