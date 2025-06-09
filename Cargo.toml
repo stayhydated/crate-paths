@@ -26,9 +26,9 @@ repository = "https://github.com/stayhydated/crate-paths"
 Inflector = "0.11.4"
 check_keyword = "0.4.1"
 clap = "4.5.39"
-crate-paths = { path = "crates/crate-paths", version = "*" }
-crate-paths-cli-core = { path = "crates/crate-paths-cli-core", version = "*" }
-crate-paths-macros = { path = "crates/crate-paths-macros", version = "*" }
+crate-paths = { path = "crates/crate-paths", version = "0.1.0" }
+crate-paths-cli-core = { path = "crates/crate-paths-cli-core", version = "0.1.0" }
+crate-paths-macros = { path = "crates/crate-paths-macros", version = "0.1.0" }
 derive_more = "2.0.1"
 getset = "0.1.5"
 prettyplease = "0.2.33"
