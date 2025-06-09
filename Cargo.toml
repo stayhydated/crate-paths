@@ -17,15 +17,18 @@ resolver = "3"
 [workspace.package]
 categories = [ "development-tools::procedural-macro-helpers" ]
 edition = "2024"
+exclude = [ ".github" ]
 license = "MIT"
+readme = "README.md"
+repository = "https://github.com/stayhydated/crate-paths"
 
 [workspace.dependencies]
 Inflector = "0.11.4"
 check_keyword = "0.4.1"
 clap = "4.5.39"
-crate-paths = { path = "crates/crate-paths" }
-crate-paths-cli-core = { path = "crates/crate-paths-cli-core" }
-crate-paths-macros = { path = "crates/crate-paths-macros" }
+crate-paths = { path = "crates/crate-paths", version = "*" }
+crate-paths-cli-core = { path = "crates/crate-paths-cli-core", version = "*" }
+crate-paths-macros = { path = "crates/crate-paths-macros", version = "*" }
 derive_more = "2.0.1"
 getset = "0.1.5"
 prettyplease = "0.2.33"
