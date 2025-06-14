@@ -59,4 +59,4 @@ todo!()
 
 ## Examples
 
-see each crate in [tests-paths](../../tests-paths), whose README's contains information of the backend used.
+see a basic example in [example](../../example), whose README's contains information of the backend used.

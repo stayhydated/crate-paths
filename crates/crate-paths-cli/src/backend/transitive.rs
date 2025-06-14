@@ -31,16 +31,14 @@ fn validate_file_path(s: &str) -> Result<PathBuf, String> {
         } else {
             Err("Path must be a file, not a directory".to_string())
         }
-    } else {
-        if let Some(parent) = path.parent() {
-            if parent.exists() && parent.is_dir() {
-                Ok(path)
-            } else {
-                Err("Parent directory must exist".to_string())
-            }
-        } else {
+    } else if let Some(parent) = path.parent() {
+        if parent.exists() && parent.is_dir() {
             Ok(path)
+        } else {
+            Err("Parent directory must exist".to_string())
         }
+    } else {
+        Ok(path)
     }
 }
 
