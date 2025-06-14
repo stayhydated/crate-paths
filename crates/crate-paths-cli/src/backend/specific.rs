@@ -6,6 +6,7 @@ use crate::writer;
 use clap::Parser;
 use crate_paths_cli_core::backend;
 
+// if you bothered looking at this code, please don't polute crates.io lmao
 #[derive(Parser)]
 #[command(
     name = "crate-paths",

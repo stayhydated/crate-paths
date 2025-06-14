@@ -15,14 +15,33 @@ struct TransitiveArgs {
     #[arg(short, long)]
     crate_name: String,
 
-    /// Output path for the generated paths tree.
-    /// Can be a directory or a file.
-    #[arg(short, long)]
+    /// Output file path for the generated paths tree.
+    /// Can only be a file
+    #[arg(short, long, value_parser = validate_file_path)]
     output_path: PathBuf,
+}
 
-    /// Skip calling `cargo init` when the output path is a directory (just write to a file at this point)
-    #[arg(long, default_value = "false")]
-    skip_init: bool,
+// avoid possible unintended crate pollution from the users lmao
+fn validate_file_path(s: &str) -> Result<PathBuf, String> {
+    let path = PathBuf::from(s);
+
+    if path.exists() {
+        if path.is_file() {
+            Ok(path)
+        } else {
+            Err("Path must be a file, not a directory".to_string())
+        }
+    } else {
+        if let Some(parent) = path.parent() {
+            if parent.exists() && parent.is_dir() {
+                Ok(path)
+            } else {
+                Err("Parent directory must exist".to_string())
+            }
+        } else {
+            Ok(path)
+        }
+    }
 }
 
 #[allow(unused, dead_code)]
@@ -33,7 +52,7 @@ pub fn process() -> Result<(), CratePathCliError> {
     let rustup_command = BackendCommand::Rustup {
         crate_name: args.crate_name.clone(),
     };
-    match rustup_command.process(&args.output_path, args.skip_init) {
+    match rustup_command.process(&args.output_path, true) {
         Ok(()) => {
             return Ok(());
         },
@@ -49,7 +68,7 @@ pub fn process() -> Result<(), CratePathCliError> {
     let local_command = BackendCommand::Local {
         crate_name: args.crate_name.clone(),
     };
-    match local_command.process(&args.output_path, args.skip_init) {
+    match local_command.process(&args.output_path, true) {
         Ok(()) => {
             return Ok(());
         },
@@ -68,7 +87,7 @@ pub fn process() -> Result<(), CratePathCliError> {
         crate_name: args.crate_name.clone(),
         crate_version,
     };
-    match docsrs_command.process(&args.output_path, args.skip_init) {
+    match docsrs_command.process(&args.output_path, true) {
         Ok(()) => Ok(()),
         Err(e_docsrs) => {
             eprintln!("Docs.rs backend failed: {}", e_docsrs);

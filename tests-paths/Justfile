@@ -10,14 +10,14 @@ all:
   just gpui
 
 std:
-  cargo run -p crate-paths-cli -- -c std -o .
+  cargo run -p crate-paths-cli --features specific -- -o ./std-crate-paths/src/lib.rs rustup -c std
 
 serde:
-  cargo run -p crate-paths-cli -- -c serde -o .
+  cargo run -p crate-paths-cli --features specific -- -o ./serde-crate-paths/src/lib.rs local -c serde
 
 tonic:
-  cargo run -p crate-paths-cli -- -c tonic -o .
+  cargo run -p crate-paths-cli --features specific -- -o ./tonic-crate-paths/src/lib.rs docsrs -c tonic
 
 gpui:
-  cargo run -p crate-paths-cli -- -c gpui -o .
-  cargo run -p crate-paths-cli -- -c gpui-component -o .
+  cargo run -p crate-paths-cli --features specific -- -o ./gpui-crate-paths/src/lib.rs local -c gpui
+  cargo run -p crate-paths-cli --features specific -- -o ./gpui-component-crate-paths/src/lib.rs local -c gpui-component

@@ -66,6 +66,20 @@ fn write_to_folder(
             .status()
             .map_err(|e| WriterError::CargoInit(format!("Failed to execute cargo init: {}", e)))?;
 
+        // Add publish = false to Cargo.toml
+        let cargo_toml_path = new_crate_paths.join("Cargo.toml");
+        if cargo_toml_path.exists() {
+            let mut cargo_toml_content = fs::read_to_string(&cargo_toml_path)
+                .map_err(|e| WriterError::CargoInit(format!("Failed to read Cargo.toml: {}", e)))?;
+
+            if !cargo_toml_content.contains("publish = false") {
+                cargo_toml_content.push_str("\npublish = false\n");
+                fs::write(&cargo_toml_path, cargo_toml_content).map_err(|e| {
+                    WriterError::CargoInit(format!("Failed to write Cargo.toml: {}", e))
+                })?;
+            }
+        }
+
         let cargo_add_crate_paths_status = Command::new("cargo")
             .arg("add")
             .arg("crate-paths")
