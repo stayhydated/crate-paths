@@ -1423,7 +1423,6 @@ name = "crate-paths-macros"
 version = "0.1.0"
 dependencies = [
  "check_keyword",
- "crate-paths",
  "proc-macro2",
  "quote",
  "syn 2.0.101",

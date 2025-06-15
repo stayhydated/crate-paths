@@ -5,7 +5,8 @@ members = [
   "crates/crate-paths-cli",
   "crates/crate-paths-cli-core",
   "crates/crate-paths-macros",
-  "crates/dummy-consumer-lib", "example",
+  "crates/dummy-consumer-lib",
+  "example",
   "tests/gpui-component-crate-paths",
   "tests/gpui-crate-paths",
   "tests/serde-crate-paths",
@@ -19,8 +20,10 @@ categories = [ "development-tools::procedural-macro-helpers" ]
 edition = "2024"
 exclude = [ ".github" ]
 license = "MIT"
+publish = true
 readme = "README.md"
 repository = "https://github.com/stayhydated/crate-paths"
+version = "0.1.0"
 
 [workspace.dependencies]
 Inflector = "0.11.4"

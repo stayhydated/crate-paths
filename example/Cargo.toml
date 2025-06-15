@@ -1,8 +1,9 @@
 [package]
 name = "example"
-version = "0.1.0"
+version.workspace = true
 categories.workspace = true
 edition.workspace = true
+publish = false
 license = "Unlicense"
 
 [dependencies]
