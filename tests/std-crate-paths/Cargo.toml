@@ -1,6 +1,6 @@
 [package]
-name = "tonic-crate-paths"
-version = "0.1.0"
+name = "std-crate-paths"
+version.workspace = true
 edition.workspace = true
 license = "Unlicense"
 publish = false

@@ -1,0 +1,14 @@
+[package]
+name = "example"
+version.workspace = true
+categories.workspace = true
+edition.workspace = true
+publish = false
+license = "Unlicense"
+
+[dependencies]
+automod = "1.0.15"
+crate-paths = { workspace = true }
+
+[lints]
+workspace = true

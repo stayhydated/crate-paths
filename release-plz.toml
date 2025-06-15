@@ -1,4 +1,3 @@
 [workspace]
-changelog_path = "./CHANGELOG.md"
 changelog_update = true
 semver_check = false
