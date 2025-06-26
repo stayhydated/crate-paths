@@ -81,11 +81,10 @@ pub fn parse_html_to_items(
                 existing_item.path().clone(),
                 new_kinds,
             );
-        } else if !items_map.contains_key(&key) {
-            items_map.insert(
-                key,
-                ItemEntry::new(crate_name.to_owned(), item_name, path, vec![kind]),
-            );
+        } else {
+            items_map.entry(key).or_insert_with(|| {
+                ItemEntry::new(crate_name.to_owned(), item_name, path, vec![kind])
+            });
         }
     }
 
