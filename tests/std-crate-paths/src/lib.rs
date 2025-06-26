@@ -1774,6 +1774,9 @@ pub mod fs {
     /// pub struct `ReadDir`
     pub const ReadDir: crate_paths::Path = crate_paths::Path::new("std::fs::ReadDir");
 
+    /// pub enum `TryLockError`
+    pub const TryLockError: crate_paths::Path = crate_paths::Path::new("std::fs::TryLockError");
+
     /// pub function `canonicalize`
     pub const canonicalize: crate_paths::Path = crate_paths::Path::new("std::fs::canonicalize");
 
@@ -1837,10 +1840,6 @@ pub mod future {
     /// pub trait `AsyncDrop`
     pub const AsyncDrop: crate_paths::Path = crate_paths::Path::new("std::future::AsyncDrop");
 
-    /// pub struct `AsyncDropInPlace`
-    pub const AsyncDropInPlace: crate_paths::Path =
-        crate_paths::Path::new("std::future::AsyncDropInPlace");
-
     /// pub trait `Future`
     pub const Future: crate_paths::Path = crate_paths::Path::new("std::future::Future");
 
@@ -1855,9 +1854,6 @@ pub mod future {
 
     /// pub struct `Ready`
     pub const Ready: crate_paths::Path = crate_paths::Path::new("std::future::Ready");
-
-    /// pub function `async_drop`
-    pub const async_drop: crate_paths::Path = crate_paths::Path::new("std::future::async_drop");
 
     /// pub function `async_drop_in_place`
     pub const async_drop_in_place: crate_paths::Path =
@@ -1914,6 +1910,10 @@ pub mod hint {
 
     /// pub function `must_use`
     pub const must_use: crate_paths::Path = crate_paths::Path::new("std::hint::must_use");
+
+    /// pub function `select_unpredictable`
+    pub const select_unpredictable: crate_paths::Path =
+        crate_paths::Path::new("std::hint::select_unpredictable");
 
     /// pub function `spin_loop`
     pub const spin_loop: crate_paths::Path = crate_paths::Path::new("std::hint::spin_loop");
@@ -3247,6 +3247,10 @@ pub mod intrinsics {
         pub const simd_extract: crate_paths::Path =
             crate_paths::Path::new("std::intrinsics::simd::simd_extract");
 
+        /// pub function `simd_extract_dyn`
+        pub const simd_extract_dyn: crate_paths::Path =
+            crate_paths::Path::new("std::intrinsics::simd::simd_extract_dyn");
+
         /// pub function `simd_fabs`
         pub const simd_fabs: crate_paths::Path =
             crate_paths::Path::new("std::intrinsics::simd::simd_fabs");
@@ -3314,6 +3318,10 @@ pub mod intrinsics {
         /// pub function `simd_insert`
         pub const simd_insert: crate_paths::Path =
             crate_paths::Path::new("std::intrinsics::simd::simd_insert");
+
+        /// pub function `simd_insert_dyn`
+        pub const simd_insert_dyn: crate_paths::Path =
+            crate_paths::Path::new("std::intrinsics::simd::simd_insert_dyn");
 
         /// pub function `simd_le`
         pub const simd_le: crate_paths::Path =
@@ -4473,6 +4481,10 @@ pub mod os {
             pub const lchown: crate_paths::Path =
                 crate_paths::Path::new("std::os::unix::fs::lchown");
 
+            /// pub function `mkfifo`
+            pub const mkfifo: crate_paths::Path =
+                crate_paths::Path::new("std::os::unix::fs::mkfifo");
+
             /// pub function `symlink`
             pub const symlink: crate_paths::Path =
                 crate_paths::Path::new("std::os::unix::fs::symlink");
@@ -4922,6 +4934,9 @@ pub mod pin {
     /// pub trait `PinCoerceUnsized`
     pub const PinCoerceUnsized: crate_paths::Path =
         crate_paths::Path::new("std::pin::PinCoerceUnsized");
+
+    /// pub struct `UnsafePinned`
+    pub const UnsafePinned: crate_paths::Path = crate_paths::Path::new("std::pin::UnsafePinned");
 
     /// pub macro `pin`
     pub const pin: crate_paths::Path = crate_paths::Path::new("std::pin::pin");
@@ -6515,6 +6530,9 @@ pub mod sync {
     /// pub type alias `TryLockResult`
     pub const TryLockResult: crate_paths::Path = crate_paths::Path::new("std::sync::TryLockResult");
 
+    /// pub struct `UniqueArc`
+    pub const UniqueArc: crate_paths::Path = crate_paths::Path::new("std::sync::UniqueArc");
+
     /// pub struct `WaitTimeoutResult`
     pub const WaitTimeoutResult: crate_paths::Path =
         crate_paths::Path::new("std::sync::WaitTimeoutResult");
@@ -6533,6 +6551,9 @@ pub mod sync {
         /// pub constant `ATOMIC_USIZE_INIT`
         pub const ATOMIC_USIZE_INIT: crate_paths::Path =
             crate_paths::Path::new("std::sync::atomic::ATOMIC_USIZE_INIT");
+
+        /// pub type alias `Atomic`
+        pub const Atomic: crate_paths::Path = crate_paths::Path::new("std::sync::atomic::Atomic");
 
         /// pub struct `AtomicBool`
         pub const AtomicBool: crate_paths::Path =
@@ -6557,6 +6578,10 @@ pub mod sync {
         /// pub struct `AtomicIsize`
         pub const AtomicIsize: crate_paths::Path =
             crate_paths::Path::new("std::sync::atomic::AtomicIsize");
+
+        /// pub trait `AtomicPrimitive`
+        pub const AtomicPrimitive: crate_paths::Path =
+            crate_paths::Path::new("std::sync::atomic::AtomicPrimitive");
 
         /// pub struct `AtomicPtr`
         pub const AtomicPtr: crate_paths::Path =

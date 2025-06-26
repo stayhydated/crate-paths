@@ -10,4 +10,4 @@ fmt:
 
 test:
   cargo test
-  cd tests-paths && just all
+  cd tests && just all
