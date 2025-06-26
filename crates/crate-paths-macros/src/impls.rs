@@ -1,6 +1,6 @@
 use check_keyword::CheckKeyword;
 use proc_macro::TokenStream;
-use quote::quote;
+use quote::{format_ident, quote};
 
 pub fn path_val(input: TokenStream) -> TokenStream {
     let syn_path = syn::parse_macro_input!(input as syn::Path);
@@ -34,7 +34,7 @@ pub fn path(input: TokenStream) -> TokenStream {
         false => item_name.to_string(),
     };
 
-    let safe_ident = syn::parse_str::<syn::Ident>(&safe_name).unwrap();
+    let safe_ident = format_ident!("{}", safe_name);
 
     let value: proc_macro2::TokenStream = path_val(input_clone).into();
 
