@@ -1371,7 +1371,7 @@ dependencies = [
 
 [[package]]
 name = "crate-paths"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "crate-paths-macros",
  "derive_more 2.0.1",
@@ -1382,7 +1382,7 @@ dependencies = [
 
 [[package]]
 name = "crate-paths-cli"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "clap",
  "crate-paths-cli-core",
@@ -1393,7 +1393,7 @@ dependencies = [
 
 [[package]]
 name = "crate-paths-cli-core"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "Inflector",
  "check_keyword",
@@ -1410,7 +1410,7 @@ dependencies = [
 
 [[package]]
 name = "crate-paths-macros"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "check_keyword",
  "proc-macro2",
