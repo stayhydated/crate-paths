@@ -1119,16 +1119,6 @@ dependencies = [
 [[package]]
 name = "collections"
 version = "0.1.0"
-source = "git+https://github.com/zed-industries/zed.git?rev=06a199da4d8a147c7867f4c82ffafed4974bea24#06a199da4d8a147c7867f4c82ffafed4974bea24"
-dependencies = [
- "indexmap",
- "rustc-hash 2.1.1",
- "workspace-hack",
-]
-
-[[package]]
-name = "collections"
-version = "0.1.0"
 source = "git+https://github.com/zed-industries/zed.git#365997d79d558625491eb0b7a7d6ff186acc1bc8"
 dependencies = [
  "indexmap",
@@ -1626,17 +1616,6 @@ dependencies = [
 [[package]]
 name = "derive_refineable"
 version = "0.1.0"
-source = "git+https://github.com/zed-industries/zed.git?rev=06a199da4d8a147c7867f4c82ffafed4974bea24#06a199da4d8a147c7867f4c82ffafed4974bea24"
-dependencies = [
- "proc-macro2",
- "quote",
- "syn 2.0.101",
- "workspace-hack",
-]
-
-[[package]]
-name = "derive_refineable"
-version = "0.1.0"
 source = "git+https://github.com/zed-industries/zed.git#365997d79d558625491eb0b7a7d6ff186acc1bc8"
 dependencies = [
  "proc-macro2",
@@ -1773,7 +1752,7 @@ checksum = "7454e41ff9012c00d53cf7f475c5e3afa3b91b7c90568495495e8d9bf47a1055"
 name = "dummy-consumer-lib"
 version = "0.1.0"
 dependencies = [
- "gpui 0.1.0 (git+https://github.com/zed-industries/zed.git?rev=06a199da4d8a147c7867f4c82ffafed4974bea24)",
+ "gpui",
  "gpui-component",
 ]
 
@@ -2507,99 +2486,6 @@ dependencies = [
 [[package]]
 name = "gpui"
 version = "0.1.0"
-source = "git+https://github.com/zed-industries/zed.git?rev=06a199da4d8a147c7867f4c82ffafed4974bea24#06a199da4d8a147c7867f4c82ffafed4974bea24"
-dependencies = [
- "anyhow",
- "as-raw-xcb-connection",
- "ashpd",
- "async-task",
- "bindgen",
- "blade-graphics",
- "blade-macros",
- "blade-util",
- "block",
- "bytemuck",
- "calloop",
- "calloop-wayland-source",
- "cbindgen",
- "cocoa 0.26.1",
- "collections 0.1.0 (git+https://github.com/zed-industries/zed.git?rev=06a199da4d8a147c7867f4c82ffafed4974bea24)",
- "core-foundation 0.10.1",
- "core-foundation-sys",
- "core-graphics 0.24.0",
- "core-text",
- "core-video",
- "cosmic-text",
- "ctor",
- "derive_more 0.99.20",
- "embed-resource",
- "etagere",
- "filedescriptor",
- "flume",
- "font-kit",
- "foreign-types 0.5.0",
- "futures",
- "gpui_macros 0.1.0 (git+https://github.com/zed-industries/zed.git?rev=06a199da4d8a147c7867f4c82ffafed4974bea24)",
- "http_client 0.1.0 (git+https://github.com/zed-industries/zed.git?rev=06a199da4d8a147c7867f4c82ffafed4974bea24)",
- "image",
- "inventory",
- "itertools 0.14.0",
- "libc",
- "log",
- "lyon",
- "media 0.1.0 (git+https://github.com/zed-industries/zed.git?rev=06a199da4d8a147c7867f4c82ffafed4974bea24)",
- "metal",
- "naga",
- "num_cpus",
- "objc",
- "oo7",
- "open",
- "parking",
- "parking_lot",
- "pathfinder_geometry",
- "postage",
- "profiling",
- "rand 0.8.5",
- "raw-window-handle",
- "refineable 0.1.0 (git+https://github.com/zed-industries/zed.git?rev=06a199da4d8a147c7867f4c82ffafed4974bea24)",
- "resvg",
- "scap",
- "schemars",
- "seahash",
- "semantic_version 0.1.0 (git+https://github.com/zed-industries/zed.git?rev=06a199da4d8a147c7867f4c82ffafed4974bea24)",
- "serde",
- "serde_derive",
- "serde_json",
- "slotmap",
- "smallvec",
- "smol 2.0.2",
- "strum 0.27.1",
- "sum_tree 0.1.0 (git+https://github.com/zed-industries/zed.git?rev=06a199da4d8a147c7867f4c82ffafed4974bea24)",
- "taffy",
- "thiserror 2.0.12",
- "usvg",
- "util 0.1.0 (git+https://github.com/zed-industries/zed.git?rev=06a199da4d8a147c7867f4c82ffafed4974bea24)",
- "uuid",
- "waker-fn",
- "wayland-backend",
- "wayland-client",
- "wayland-cursor",
- "wayland-protocols",
- "wayland-protocols-plasma",
- "windows 0.61.1",
- "windows-core 0.61.2",
- "windows-numerics",
- "windows-registry",
- "workspace-hack",
- "x11-clipboard",
- "x11rb",
- "xim",
- "xkbcommon",
-]
-
-[[package]]
-name = "gpui"
-version = "0.1.0"
 source = "git+https://github.com/zed-industries/zed.git#365997d79d558625491eb0b7a7d6ff186acc1bc8"
 dependencies = [
  "anyhow",
@@ -2616,7 +2502,7 @@ dependencies = [
  "calloop-wayland-source",
  "cbindgen",
  "cocoa 0.26.1",
- "collections 0.1.0 (git+https://github.com/zed-industries/zed.git)",
+ "collections",
  "core-foundation 0.10.1",
  "core-foundation-sys",
  "core-graphics 0.24.0",
@@ -2632,15 +2518,15 @@ dependencies = [
  "font-kit",
  "foreign-types 0.5.0",
  "futures",
- "gpui_macros 0.1.0 (git+https://github.com/zed-industries/zed.git)",
- "http_client 0.1.0 (git+https://github.com/zed-industries/zed.git)",
+ "gpui_macros",
+ "http_client",
  "image",
  "inventory",
  "itertools 0.14.0",
  "libc",
  "log",
  "lyon",
- "media 0.1.0 (git+https://github.com/zed-industries/zed.git)",
+ "media",
  "metal",
  "naga",
  "num_cpus",
@@ -2654,12 +2540,12 @@ dependencies = [
  "profiling",
  "rand 0.8.5",
  "raw-window-handle",
- "refineable 0.1.0 (git+https://github.com/zed-industries/zed.git)",
+ "refineable",
  "resvg",
  "scap",
  "schemars",
  "seahash",
- "semantic_version 0.1.0 (git+https://github.com/zed-industries/zed.git)",
+ "semantic_version",
  "serde",
  "serde_derive",
  "serde_json",
@@ -2667,11 +2553,11 @@ dependencies = [
  "smallvec",
  "smol 2.0.2",
  "strum 0.27.1",
- "sum_tree 0.1.0 (git+https://github.com/zed-industries/zed.git)",
+ "sum_tree",
  "taffy",
  "thiserror 2.0.12",
  "usvg",
- "util 0.1.0 (git+https://github.com/zed-industries/zed.git)",
+ "util",
  "uuid",
  "waker-fn",
  "wayland-backend",
@@ -2699,7 +2585,7 @@ dependencies = [
  "chrono",
  "enum-iterator",
  "futures-util",
- "gpui 0.1.0 (git+https://github.com/zed-industries/zed.git)",
+ "gpui",
  "gpui-component-macros",
  "html5ever 0.27.0",
  "image",
@@ -2776,18 +2662,6 @@ name = "gpui-crate-paths"
 version = "0.1.0"
 dependencies = [
  "crate-paths",
-]
-
-[[package]]
-name = "gpui_macros"
-version = "0.1.0"
-source = "git+https://github.com/zed-industries/zed.git?rev=06a199da4d8a147c7867f4c82ffafed4974bea24#06a199da4d8a147c7867f4c82ffafed4974bea24"
-dependencies = [
- "heck 0.5.0",
- "proc-macro2",
- "quote",
- "syn 2.0.101",
- "workspace-hack",
 ]
 
 [[package]]
@@ -2995,23 +2869,6 @@ dependencies = [
  "http",
  "http-body",
  "pin-project-lite",
-]
-
-[[package]]
-name = "http_client"
-version = "0.1.0"
-source = "git+https://github.com/zed-industries/zed.git?rev=06a199da4d8a147c7867f4c82ffafed4974bea24#06a199da4d8a147c7867f4c82ffafed4974bea24"
-dependencies = [
- "anyhow",
- "bytes",
- "derive_more 0.99.20",
- "futures",
- "http",
- "log",
- "serde",
- "serde_json",
- "url",
- "workspace-hack",
 ]
 
 [[package]]
@@ -3833,22 +3690,6 @@ checksum = "d89e7ee0cfbedfc4da3340218492196241d89eefb6dab27de5df917a6d2e78cf"
 dependencies = [
  "cfg-if",
  "digest",
-]
-
-[[package]]
-name = "media"
-version = "0.1.0"
-source = "git+https://github.com/zed-industries/zed.git?rev=06a199da4d8a147c7867f4c82ffafed4974bea24#06a199da4d8a147c7867f4c82ffafed4974bea24"
-dependencies = [
- "anyhow",
- "bindgen",
- "core-foundation 0.10.1",
- "core-video",
- "ctor",
- "foreign-types 0.5.0",
- "metal",
- "objc",
- "workspace-hack",
 ]
 
 [[package]]
@@ -5109,18 +4950,9 @@ dependencies = [
 [[package]]
 name = "refineable"
 version = "0.1.0"
-source = "git+https://github.com/zed-industries/zed.git?rev=06a199da4d8a147c7867f4c82ffafed4974bea24#06a199da4d8a147c7867f4c82ffafed4974bea24"
-dependencies = [
- "derive_refineable 0.1.0 (git+https://github.com/zed-industries/zed.git?rev=06a199da4d8a147c7867f4c82ffafed4974bea24)",
- "workspace-hack",
-]
-
-[[package]]
-name = "refineable"
-version = "0.1.0"
 source = "git+https://github.com/zed-industries/zed.git#365997d79d558625491eb0b7a7d6ff186acc1bc8"
 dependencies = [
- "derive_refineable 0.1.0 (git+https://github.com/zed-industries/zed.git)",
+ "derive_refineable",
  "workspace-hack",
 ]
 
@@ -5687,16 +5519,6 @@ checksum = "0f7d95a54511e0c7be3f51e8867aa8cf35148d7b9445d44de2f943e2b206e749"
 [[package]]
 name = "semantic_version"
 version = "0.1.0"
-source = "git+https://github.com/zed-industries/zed.git?rev=06a199da4d8a147c7867f4c82ffafed4974bea24#06a199da4d8a147c7867f4c82ffafed4974bea24"
-dependencies = [
- "anyhow",
- "serde",
- "workspace-hack",
-]
-
-[[package]]
-name = "semantic_version"
-version = "0.1.0"
 source = "git+https://github.com/zed-industries/zed.git#365997d79d558625491eb0b7a7d6ff186acc1bc8"
 dependencies = [
  "anyhow",
@@ -6140,17 +5962,6 @@ name = "subtle"
 version = "2.6.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "13c2bddecc57b384dee18652358fb23172facb8a2c51ccc10d74c157bdea3292"
-
-[[package]]
-name = "sum_tree"
-version = "0.1.0"
-source = "git+https://github.com/zed-industries/zed.git?rev=06a199da4d8a147c7867f4c82ffafed4974bea24#06a199da4d8a147c7867f4c82ffafed4974bea24"
-dependencies = [
- "arrayvec",
- "log",
- "rayon",
- "workspace-hack",
-]
 
 [[package]]
 name = "sum_tree"
@@ -7260,43 +7071,12 @@ checksum = "06abde3611657adf66d383f00b093d7faecc7fa57071cce2578660c9f1010821"
 [[package]]
 name = "util"
 version = "0.1.0"
-source = "git+https://github.com/zed-industries/zed.git?rev=06a199da4d8a147c7867f4c82ffafed4974bea24#06a199da4d8a147c7867f4c82ffafed4974bea24"
-dependencies = [
- "anyhow",
- "async-fs 2.1.2",
- "async_zip",
- "collections 0.1.0 (git+https://github.com/zed-industries/zed.git?rev=06a199da4d8a147c7867f4c82ffafed4974bea24)",
- "dirs 4.0.0",
- "dunce",
- "futures",
- "futures-lite 1.13.0",
- "globset",
- "itertools 0.14.0",
- "libc",
- "log",
- "regex",
- "rust-embed",
- "serde",
- "serde_json",
- "serde_json_lenient",
- "smol 2.0.2",
- "take-until",
- "tempfile",
- "tendril",
- "unicase",
- "walkdir",
- "workspace-hack",
-]
-
-[[package]]
-name = "util"
-version = "0.1.0"
 source = "git+https://github.com/zed-industries/zed.git#365997d79d558625491eb0b7a7d6ff186acc1bc8"
 dependencies = [
  "anyhow",
  "async-fs 2.1.2",
  "async_zip",
- "collections 0.1.0 (git+https://github.com/zed-industries/zed.git)",
+ "collections",
  "dirs 4.0.0",
  "dunce",
  "futures",
