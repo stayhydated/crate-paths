@@ -22,7 +22,7 @@ let tokens = quote! {
 };
 ```
 
-This cli will allow you to do:
+This cli will generate definitions that will allow you to do:
 ```rs
 let struct_name = get();
 let field_name = get();
@@ -51,12 +51,6 @@ let tokens = quote! {
 };
 ```
 
-## Installation
-```rs
-todo!()
-```
-
-
 ## Examples
 
-see a basic example in [example](../../example), whose README's contains information of the backend used.
+See a basic example in [example](../../example), **whose Justfile contains information about the backend used.**
