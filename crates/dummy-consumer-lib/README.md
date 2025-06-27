@@ -6,5 +6,5 @@ Crates have to be declared in the `[dependencies]` block, won't work if declared
 
 ```toml
 [dependencies]
-gpui = { git = "https://github.com/zed-industries/zed.git", rev = "06a199da4d8a147c7867f4c82ffafed4974bea24" }
+gpui = { git = "https://github.com/zed-industries/zed.git" }
 ```
