@@ -603,7 +603,7 @@ dependencies = [
  "bitflags 2.9.1",
  "cexpr",
  "clang-sys",
- "itertools 0.13.0",
+ "itertools 0.10.5",
  "log",
  "prettyplease",
  "proc-macro2",
@@ -668,7 +668,7 @@ dependencies = [
 [[package]]
 name = "blade-graphics"
 version = "0.6.0"
-source = "git+https://github.com/kvark/blade?rev=416375211bb0b5826b3584dccdb6a43369e499ad#416375211bb0b5826b3584dccdb6a43369e499ad"
+source = "git+https://github.com/kvark/blade?rev=e0ec4e720957edd51b945b64dd85605ea54bcfe5#e0ec4e720957edd51b945b64dd85605ea54bcfe5"
 dependencies = [
  "ash",
  "ash-window",
@@ -701,7 +701,7 @@ dependencies = [
 [[package]]
 name = "blade-macros"
 version = "0.3.0"
-source = "git+https://github.com/kvark/blade?rev=416375211bb0b5826b3584dccdb6a43369e499ad#416375211bb0b5826b3584dccdb6a43369e499ad"
+source = "git+https://github.com/kvark/blade?rev=e0ec4e720957edd51b945b64dd85605ea54bcfe5#e0ec4e720957edd51b945b64dd85605ea54bcfe5"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -711,7 +711,7 @@ dependencies = [
 [[package]]
 name = "blade-util"
 version = "0.2.0"
-source = "git+https://github.com/kvark/blade?rev=416375211bb0b5826b3584dccdb6a43369e499ad#416375211bb0b5826b3584dccdb6a43369e499ad"
+source = "git+https://github.com/kvark/blade?rev=e0ec4e720957edd51b945b64dd85605ea54bcfe5#e0ec4e720957edd51b945b64dd85605ea54bcfe5"
 dependencies = [
  "blade-graphics",
  "bytemuck",
@@ -1119,7 +1119,7 @@ dependencies = [
 [[package]]
 name = "collections"
 version = "0.1.0"
-source = "git+https://github.com/zed-industries/zed.git#365997d79d558625491eb0b7a7d6ff186acc1bc8"
+source = "git+https://github.com/zed-industries/zed.git#93b1e95a5dc4fed41e6467e3dc9a2c6090896026"
 dependencies = [
  "indexmap",
  "rustc-hash 2.1.1",
@@ -1137,6 +1137,16 @@ name = "colorchoice"
 version = "1.0.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b05b61dc5112cbb17e4b6cd61790d9845d13888356391624cbe7e41efeac1e75"
+
+[[package]]
+name = "command-fds"
+version = "0.3.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f849b92c694fe237ecd8fafd1ba0df7ae0d45c1df6daeb7f68ed4220d51640bd"
+dependencies = [
+ "nix 0.30.1",
+ "thiserror 2.0.12",
+]
 
 [[package]]
 name = "concurrent-queue"
@@ -1616,7 +1626,7 @@ dependencies = [
 [[package]]
 name = "derive_refineable"
 version = "0.1.0"
-source = "git+https://github.com/zed-industries/zed.git#365997d79d558625491eb0b7a7d6ff186acc1bc8"
+source = "git+https://github.com/zed-industries/zed.git#93b1e95a5dc4fed41e6467e3dc9a2c6090896026"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -2486,7 +2496,7 @@ dependencies = [
 [[package]]
 name = "gpui"
 version = "0.1.0"
-source = "git+https://github.com/zed-industries/zed.git#365997d79d558625491eb0b7a7d6ff186acc1bc8"
+source = "git+https://github.com/zed-industries/zed.git#93b1e95a5dc4fed41e6467e3dc9a2c6090896026"
 dependencies = [
  "anyhow",
  "as-raw-xcb-connection",
@@ -2543,7 +2553,7 @@ dependencies = [
  "refineable",
  "resvg",
  "scap",
- "schemars",
+ "schemars 1.0.3",
  "seahash",
  "semantic_version",
  "serde",
@@ -2599,7 +2609,7 @@ dependencies = [
  "regex",
  "resvg",
  "rust-i18n",
- "schemars",
+ "schemars 0.8.22",
  "serde",
  "serde_json",
  "smallvec",
@@ -2667,7 +2677,7 @@ dependencies = [
 [[package]]
 name = "gpui_macros"
 version = "0.1.0"
-source = "git+https://github.com/zed-industries/zed.git#365997d79d558625491eb0b7a7d6ff186acc1bc8"
+source = "git+https://github.com/zed-industries/zed.git#93b1e95a5dc4fed41e6467e3dc9a2c6090896026"
 dependencies = [
  "heck 0.5.0",
  "proc-macro2",
@@ -2874,7 +2884,7 @@ dependencies = [
 [[package]]
 name = "http_client"
 version = "0.1.0"
-source = "git+https://github.com/zed-industries/zed.git#365997d79d558625491eb0b7a7d6ff186acc1bc8"
+source = "git+https://github.com/zed-industries/zed.git#93b1e95a5dc4fed41e6467e3dc9a2c6090896026"
 dependencies = [
  "anyhow",
  "bytes",
@@ -3695,7 +3705,7 @@ dependencies = [
 [[package]]
 name = "media"
 version = "0.1.0"
-source = "git+https://github.com/zed-industries/zed.git#365997d79d558625491eb0b7a7d6ff186acc1bc8"
+source = "git+https://github.com/zed-industries/zed.git#93b1e95a5dc4fed41e6467e3dc9a2c6090896026"
 dependencies = [
  "anyhow",
  "bindgen",
@@ -3883,6 +3893,18 @@ name = "new_debug_unreachable"
 version = "1.0.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "650eef8c711430f1a879fdd01d4745a7deea475becfb90269c06775983bbf086"
+
+[[package]]
+name = "nix"
+version = "0.29.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "71e2746dc3a24dd78b3cfcb7be93368c6de9963d30f43a6a73998a9cf4b17b46"
+dependencies = [
+ "bitflags 2.9.1",
+ "cfg-if",
+ "cfg_aliases",
+ "libc",
+]
 
 [[package]]
 name = "nix"
@@ -4948,9 +4970,29 @@ dependencies = [
 ]
 
 [[package]]
+name = "ref-cast"
+version = "1.0.24"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "4a0ae411dbe946a674d89546582cea4ba2bb8defac896622d6496f14c23ba5cf"
+dependencies = [
+ "ref-cast-impl",
+]
+
+[[package]]
+name = "ref-cast-impl"
+version = "1.0.24"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "1165225c21bff1f3bbce98f5a1f889949bc902d3575308cc7b0de30b4f6d27c7"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "syn 2.0.101",
+]
+
+[[package]]
 name = "refineable"
 version = "0.1.0"
-source = "git+https://github.com/zed-industries/zed.git#365997d79d558625491eb0b7a7d6ff186acc1bc8"
+source = "git+https://github.com/zed-industries/zed.git#93b1e95a5dc4fed41e6467e3dc9a2c6090896026"
 dependencies = [
  "derive_refineable",
  "workspace-hack",
@@ -5394,8 +5436,21 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "3fbf2ae1b8bc8e02df939598064d22402220cd5bbcca1c76f7d6a310974d5615"
 dependencies = [
  "dyn-clone",
+ "schemars_derive 0.8.22",
+ "serde",
+ "serde_json",
+]
+
+[[package]]
+name = "schemars"
+version = "1.0.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "1375ba8ef45a6f15d83fa8748f1079428295d403d6ea991d09ab100155fbc06d"
+dependencies = [
+ "dyn-clone",
  "indexmap",
- "schemars_derive",
+ "ref-cast",
+ "schemars_derive 1.0.3",
  "serde",
  "serde_json",
 ]
@@ -5405,6 +5460,18 @@ name = "schemars_derive"
 version = "0.8.22"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "32e265784ad618884abaea0600a9adf15393368d840e0222d101a072f3f7534d"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "serde_derive_internals",
+ "syn 2.0.101",
+]
+
+[[package]]
+name = "schemars_derive"
+version = "1.0.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "2b13ed22d6d49fe23712e068770b5c4df4a693a2b02eeff8e7ca3135627a24f6"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -5519,7 +5586,7 @@ checksum = "0f7d95a54511e0c7be3f51e8867aa8cf35148d7b9445d44de2f943e2b206e749"
 [[package]]
 name = "semantic_version"
 version = "0.1.0"
-source = "git+https://github.com/zed-industries/zed.git#365997d79d558625491eb0b7a7d6ff186acc1bc8"
+source = "git+https://github.com/zed-industries/zed.git#93b1e95a5dc4fed41e6467e3dc9a2c6090896026"
 dependencies = [
  "anyhow",
  "serde",
@@ -5966,7 +6033,7 @@ checksum = "13c2bddecc57b384dee18652358fb23172facb8a2c51ccc10d74c157bdea3292"
 [[package]]
 name = "sum_tree"
 version = "0.1.0"
-source = "git+https://github.com/zed-industries/zed.git#365997d79d558625491eb0b7a7d6ff186acc1bc8"
+source = "git+https://github.com/zed-industries/zed.git#93b1e95a5dc4fed41e6467e3dc9a2c6090896026"
 dependencies = [
  "arrayvec",
  "log",
@@ -7071,12 +7138,13 @@ checksum = "06abde3611657adf66d383f00b093d7faecc7fa57071cce2578660c9f1010821"
 [[package]]
 name = "util"
 version = "0.1.0"
-source = "git+https://github.com/zed-industries/zed.git#365997d79d558625491eb0b7a7d6ff186acc1bc8"
+source = "git+https://github.com/zed-industries/zed.git#93b1e95a5dc4fed41e6467e3dc9a2c6090896026"
 dependencies = [
  "anyhow",
  "async-fs 2.1.2",
  "async_zip",
  "collections",
+ "command-fds",
  "dirs 4.0.0",
  "dunce",
  "futures",
@@ -7085,11 +7153,13 @@ dependencies = [
  "itertools 0.14.0",
  "libc",
  "log",
+ "nix 0.29.0",
  "regex",
  "rust-embed",
  "serde",
  "serde_json",
  "serde_json_lenient",
+ "shlex",
  "smol 2.0.2",
  "take-until",
  "tempfile",
@@ -8022,7 +8092,7 @@ dependencies = [
  "futures-core",
  "futures-lite 2.6.0",
  "hex",
- "nix",
+ "nix 0.30.1",
  "ordered-stream",
  "serde",
  "serde_repr",
