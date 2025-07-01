@@ -32,7 +32,7 @@ crate-paths = { path = "crates/crate-paths", version = "0.1.1" }
 crate-paths-cli-core = { path = "crates/crate-paths-cli-core", version = "0.1.1" }
 crate-paths-macros = { path = "crates/crate-paths-macros", version = "0.1.1" }
 derive_more = "2.0.1"
-getset = "0.1.5"
+getset = "0.1.6"
 prettyplease = "0.2.33"
 proc-macro2 = "1.0.93"
 quote = "1.0.38"
