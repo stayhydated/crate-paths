@@ -2641,13 +2641,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "gpui-component-crate-paths"
-version = "0.1.0"
-dependencies = [
- "crate-paths",
-]
-
-[[package]]
 name = "gpui-component-macros"
 version = "0.1.0"
 source = "git+https://github.com/longbridge/gpui-component.git#c3ec1deb976bff79561cc5f07fbac469c10a0d4a"
@@ -2655,13 +2648,6 @@ dependencies = [
  "proc-macro2",
  "quote",
  "syn 2.0.101",
-]
-
-[[package]]
-name = "gpui-crate-paths"
-version = "0.1.0"
-dependencies = [
- "crate-paths",
 ]
 
 [[package]]
@@ -5542,13 +5528,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "serde-crate-paths"
-version = "0.1.0"
-dependencies = [
- "crate-paths",
-]
-
-[[package]]
 name = "serde_derive"
 version = "1.0.219"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -5859,13 +5838,6 @@ name = "static_assertions"
 version = "1.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a2eb9349b6444b326872e140eb1cf5e7c522154d69e7a0ffb0fb81c06b37543f"
-
-[[package]]
-name = "std-crate-paths"
-version = "0.1.0"
-dependencies = [
- "crate-paths",
-]
 
 [[package]]
 name = "streaming-iterator"
@@ -6453,13 +6425,6 @@ name = "toml_write"
 version = "0.1.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "5d99f8c9a7727884afe522e9bd5edbfc91a3312b36a77b5fb8926e4c31a41801"
-
-[[package]]
-name = "tonic-crate-paths"
-version = "0.1.0"
-dependencies = [
- "crate-paths",
-]
 
 [[package]]
 name = "tower"

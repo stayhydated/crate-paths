@@ -7,11 +7,6 @@ members = [
   "crates/crate-paths-macros",
   "crates/dummy-consumer-lib",
   "example",
-  "tests/gpui-component-crate-paths",
-  "tests/gpui-crate-paths",
-  "tests/serde-crate-paths",
-  "tests/std-crate-paths",
-  "tests/tonic-crate-paths",
 ]
 resolver = "3"
 
@@ -23,6 +18,7 @@ publish = true
 readme = "README.md"
 repository = "https://github.com/stayhydated/crate-paths"
 version = "0.1.1"
+rust-version = "1.91"
 
 [workspace.dependencies]
 Inflector = "0.11.4"
