@@ -19,6 +19,10 @@ struct TransitiveArgs {
     /// Can only be a file
     #[arg(short, long, value_parser = validate_file_path)]
     output_path: PathBuf,
+
+    /// Skip local lookup
+    #[arg(short, long)]
+    skip_local: bool,
 }
 
 // avoid possible unintended crate pollution from the users lmao
@@ -62,20 +66,23 @@ pub fn process() -> Result<(), CratePathCliError> {
         },
     }
 
-    eprintln!("Attempting Local backend for crate: {}", args.crate_name);
-    let local_command = BackendCommand::Local {
-        crate_name: args.crate_name.clone(),
-    };
-    match local_command.process(&args.output_path, true) {
-        Ok(()) => {
-            return Ok(());
-        },
-        Err(e_local) => {
-            eprintln!("Local backend failed: {}. Trying next backend...", e_local);
-        },
+    if !args.skip_local {
+        eprintln!("Attempting Local backend for crate: {}", args.crate_name);
+        let local_command = BackendCommand::Local {
+            crate_name: args.crate_name.clone(),
+        };
+        match local_command.process(&args.output_path, true) {
+            Ok(()) => {
+                return Ok(());
+            },
+            Err(e_local) => {
+                eprintln!("Local backend failed: {}. Trying next backend...", e_local);
+            },
+        }
     }
 
-    let crate_version = "latest".to_owned();
+    let crate_version = crate_paths_cli_core::backend::local::get_crate_version(&args.crate_name)
+        .unwrap_or_else(|| "latest".to_owned());
 
     eprintln!(
         "Attempting Docs.rs backend for crate: {} version: {}",
