@@ -87,9 +87,6 @@ pub mod codec {
     /// pub trait `Encoder`
     pub const Encoder: crate_paths::Path = crate_paths::Path::new("tonic::codec::Encoder");
 
-    /// pub struct `ProstCodec`
-    pub const ProstCodec: crate_paths::Path = crate_paths::Path::new("tonic::codec::ProstCodec");
-
     /// pub struct `Streaming`
     pub const Streaming: crate_paths::Path = crate_paths::Path::new("tonic::codec::Streaming");
 }

@@ -110,6 +110,9 @@ pub const Background: crate_paths::Path = crate_paths::Path::new("gpui::Backgrou
 pub const BackgroundExecutor: crate_paths::Path =
     crate_paths::Path::new("gpui::BackgroundExecutor");
 
+/// pub struct `BindingIndex`
+pub const BindingIndex: crate_paths::Path = crate_paths::Path::new("gpui::BindingIndex");
+
 /// pub enum `BorderStyle`
 pub const BorderStyle: crate_paths::Path = crate_paths::Path::new("gpui::BorderStyle");
 
@@ -943,6 +946,9 @@ pub const WindowBackgroundAppearance: crate_paths::Path =
 /// pub enum `WindowBounds`
 pub const WindowBounds: crate_paths::Path = crate_paths::Path::new("gpui::WindowBounds");
 
+/// pub enum `WindowControlArea`
+pub const WindowControlArea: crate_paths::Path = crate_paths::Path::new("gpui::WindowControlArea");
+
 /// pub struct `WindowControls`
 pub const WindowControls: crate_paths::Path = crate_paths::Path::new("gpui::WindowControls");
 
@@ -1048,6 +1054,10 @@ pub const fill: crate_paths::Path = crate_paths::Path::new("gpui::fill");
 
 /// pub function `font`
 pub const font: crate_paths::Path = crate_paths::Path::new("gpui::font");
+
+/// pub function `generate_list_of_all_registered_actions`
+pub const generate_list_of_all_registered_actions: crate_paths::Path =
+    crate_paths::Path::new("gpui::generate_list_of_all_registered_actions");
 
 /// pub function `green`
 pub const green: crate_paths::Path = crate_paths::Path::new("gpui::green");

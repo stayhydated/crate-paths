@@ -70,17 +70,19 @@ pub fn parse_html_to_items(
         let item_name = path.split("::").last().unwrap().to_string();
         let key = format!("{}::{}", crate_name, path);
 
-        if let Some(existing_item) = items_map.get_mut(&key)
-            && !existing_item.kinds().contains(&kind)
-        {
-            let mut new_kinds = existing_item.kinds().clone();
-            new_kinds.push(kind);
-            *existing_item = ItemEntry::new(
-                existing_item.crate_name().clone(),
-                existing_item.item_name().clone(),
-                existing_item.path().clone(),
-                new_kinds,
-            );
+        // error[E0658]: `let` expressions in this position are unstable
+        #[allow(clippy::collapsible_if)]
+        if let Some(existing_item) = items_map.get_mut(&key) {
+            if !existing_item.kinds().contains(&kind) {
+                let mut new_kinds = existing_item.kinds().clone();
+                new_kinds.push(kind);
+                *existing_item = ItemEntry::new(
+                    existing_item.crate_name().clone(),
+                    existing_item.item_name().clone(),
+                    existing_item.path().clone(),
+                    new_kinds,
+                );
+            }
         } else {
             items_map.entry(key).or_insert_with(|| {
                 ItemEntry::new(crate_name.to_owned(), item_name, path, vec![kind])

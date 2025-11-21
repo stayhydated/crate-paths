@@ -308,10 +308,6 @@ pub mod arch {
     pub const is_riscv_feature_detected: crate_paths::Path =
         crate_paths::Path::new("std::arch::is_riscv_feature_detected");
 
-    /// pub macro `is_s390x_feature_detected`
-    pub const is_s390x_feature_detected: crate_paths::Path =
-        crate_paths::Path::new("std::arch::is_s390x_feature_detected");
-
     /// pub macro `is_x86_feature_detected`
     pub const is_x86_feature_detected: crate_paths::Path =
         crate_paths::Path::new("std::arch::is_x86_feature_detected");
@@ -481,12 +477,6 @@ pub mod char {
     /// pub constant `MAX`
     pub const MAX: crate_paths::Path = crate_paths::Path::new("std::char::MAX");
 
-    /// pub constant `MAX_LEN_UTF16`
-    pub const MAX_LEN_UTF16: crate_paths::Path = crate_paths::Path::new("std::char::MAX_LEN_UTF16");
-
-    /// pub constant `MAX_LEN_UTF8`
-    pub const MAX_LEN_UTF8: crate_paths::Path = crate_paths::Path::new("std::char::MAX_LEN_UTF8");
-
     /// pub struct `ParseCharError`
     pub const ParseCharError: crate_paths::Path =
         crate_paths::Path::new("std::char::ParseCharError");
@@ -529,9 +519,6 @@ pub mod clone {
     /// pub trait `CloneToUninit`
     pub const CloneToUninit: crate_paths::Path =
         crate_paths::Path::new("std::clone::CloneToUninit");
-
-    /// pub trait `UseCloned`
-    pub const UseCloned: crate_paths::Path = crate_paths::Path::new("std::clone::UseCloned");
 }
 pub mod cmp {
     /// pub trait + proc derive `Eq`
@@ -841,6 +828,26 @@ pub mod collections {
         /// pub struct `RandomState`
         pub const RandomState: crate_paths::Path =
             crate_paths::Path::new("std::collections::hash_map::RandomState");
+
+        /// pub struct `RawEntryBuilder`
+        pub const RawEntryBuilder: crate_paths::Path =
+            crate_paths::Path::new("std::collections::hash_map::RawEntryBuilder");
+
+        /// pub struct `RawEntryBuilderMut`
+        pub const RawEntryBuilderMut: crate_paths::Path =
+            crate_paths::Path::new("std::collections::hash_map::RawEntryBuilderMut");
+
+        /// pub enum `RawEntryMut`
+        pub const RawEntryMut: crate_paths::Path =
+            crate_paths::Path::new("std::collections::hash_map::RawEntryMut");
+
+        /// pub struct `RawOccupiedEntryMut`
+        pub const RawOccupiedEntryMut: crate_paths::Path =
+            crate_paths::Path::new("std::collections::hash_map::RawOccupiedEntryMut");
+
+        /// pub struct `RawVacantEntryMut`
+        pub const RawVacantEntryMut: crate_paths::Path =
+            crate_paths::Path::new("std::collections::hash_map::RawVacantEntryMut");
 
         /// pub struct `VacantEntry`
         pub const VacantEntry: crate_paths::Path =
@@ -2727,6 +2734,22 @@ pub mod intrinsics {
     pub const mul_with_overflow: crate_paths::Path =
         crate_paths::Path::new("std::intrinsics::mul_with_overflow");
 
+    /// pub function `nearbyintf128`
+    pub const nearbyintf128: crate_paths::Path =
+        crate_paths::Path::new("std::intrinsics::nearbyintf128");
+
+    /// pub function `nearbyintf16`
+    pub const nearbyintf16: crate_paths::Path =
+        crate_paths::Path::new("std::intrinsics::nearbyintf16");
+
+    /// pub function `nearbyintf32`
+    pub const nearbyintf32: crate_paths::Path =
+        crate_paths::Path::new("std::intrinsics::nearbyintf32");
+
+    /// pub function `nearbyintf64`
+    pub const nearbyintf64: crate_paths::Path =
+        crate_paths::Path::new("std::intrinsics::nearbyintf64");
+
     /// pub function `needs_drop`
     pub const needs_drop: crate_paths::Path = crate_paths::Path::new("std::intrinsics::needs_drop");
 
@@ -2807,6 +2830,12 @@ pub mod intrinsics {
     pub const read_via_copy: crate_paths::Path =
         crate_paths::Path::new("std::intrinsics::read_via_copy");
 
+    /// pub function `rintf128`
+    pub const rintf128: crate_paths::Path = crate_paths::Path::new("std::intrinsics::rintf128");
+
+    /// pub function `rintf16`
+    pub const rintf16: crate_paths::Path = crate_paths::Path::new("std::intrinsics::rintf16");
+
     /// pub function `rintf32`
     pub const rintf32: crate_paths::Path = crate_paths::Path::new("std::intrinsics::rintf32");
 
@@ -2821,21 +2850,21 @@ pub mod intrinsics {
     pub const rotate_right: crate_paths::Path =
         crate_paths::Path::new("std::intrinsics::rotate_right");
 
-    /// pub function `round_ties_even_f128`
-    pub const round_ties_even_f128: crate_paths::Path =
-        crate_paths::Path::new("std::intrinsics::round_ties_even_f128");
+    /// pub function `roundevenf128`
+    pub const roundevenf128: crate_paths::Path =
+        crate_paths::Path::new("std::intrinsics::roundevenf128");
 
-    /// pub function `round_ties_even_f16`
-    pub const round_ties_even_f16: crate_paths::Path =
-        crate_paths::Path::new("std::intrinsics::round_ties_even_f16");
+    /// pub function `roundevenf16`
+    pub const roundevenf16: crate_paths::Path =
+        crate_paths::Path::new("std::intrinsics::roundevenf16");
 
-    /// pub function `round_ties_even_f32`
-    pub const round_ties_even_f32: crate_paths::Path =
-        crate_paths::Path::new("std::intrinsics::round_ties_even_f32");
+    /// pub function `roundevenf32`
+    pub const roundevenf32: crate_paths::Path =
+        crate_paths::Path::new("std::intrinsics::roundevenf32");
 
-    /// pub function `round_ties_even_f64`
-    pub const round_ties_even_f64: crate_paths::Path =
-        crate_paths::Path::new("std::intrinsics::round_ties_even_f64");
+    /// pub function `roundevenf64`
+    pub const roundevenf64: crate_paths::Path =
+        crate_paths::Path::new("std::intrinsics::roundevenf64");
 
     /// pub function `roundf128`
     pub const roundf128: crate_paths::Path = crate_paths::Path::new("std::intrinsics::roundf128");
@@ -3781,6 +3810,10 @@ pub mod iter {
     pub const zip: crate_paths::Path = crate_paths::Path::new("std::iter::zip");
 }
 pub mod marker {
+    /// pub trait `BikeshedGuaranteedNoDrop`
+    pub const BikeshedGuaranteedNoDrop: crate_paths::Path =
+        crate_paths::Path::new("std::marker::BikeshedGuaranteedNoDrop");
+
     /// pub proc derive `CoercePointee`
     pub const CoercePointee: crate_paths::Path =
         crate_paths::Path::new("std::marker::CoercePointee");
@@ -4942,10 +4975,6 @@ pub mod prelude {
         /// pub proc attribute `cfg_eval`
         pub const cfg_eval: crate_paths::Path =
             crate_paths::Path::new("std::prelude::v1::cfg_eval");
-
-        /// pub proc attribute `define_opaque`
-        pub const define_opaque: crate_paths::Path =
-            crate_paths::Path::new("std::prelude::v1::define_opaque");
 
         /// pub macro `deref`
         pub const deref: crate_paths::Path = crate_paths::Path::new("std::prelude::v1::deref");

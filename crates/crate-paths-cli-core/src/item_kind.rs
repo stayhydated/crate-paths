@@ -1,7 +1,7 @@
 use serde::{Deserialize, Serialize};
 use strum::{Display, EnumIter};
 
-/// yanked from rustdoc-types (0.46.1)
+/// yanked from rustdoc-types (0.56.0)
 /// because i needed to derive strum on it
 #[derive(Clone, Copy, Debug, Deserialize, Display, EnumIter, Eq, Hash, PartialEq, Serialize)]
 #[serde(rename_all = "snake_case")]
@@ -69,4 +69,9 @@ pub enum ItemKind {
     /// [`Item`]s of this kind only come from the come library and exist solely
     /// to carry documentation for the respective keywords.
     Keyword,
+    /// An attribute declaration.
+    ///
+    /// [`Item`]s of this kind only come from the core library and exist solely
+    /// to carry documentation for the respective builtin attributes.
+    Attribute,
 }

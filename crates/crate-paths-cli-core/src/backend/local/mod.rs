@@ -64,3 +64,29 @@ pub fn process(crate_name: &str) -> Result<Vec<ItemEntry>, CoreError> {
         .map_err(CoreError::from)?;
     parser::parse_html_to_items(crate_name, &html_content).map_err(CoreError::from)
 }
+
+pub fn get_crate_version(crate_name: &str) -> Option<String> {
+    let output = Command::new("cargo")
+        .args(["metadata", "--format-version", "1"])
+        .output()
+        .ok()?;
+
+    if !output.status.success() {
+        return None;
+    }
+
+    let metadata: serde_json::Value = serde_json::from_slice(&output.stdout).ok()?;
+    let packages = metadata.get("packages")?.as_array()?;
+
+    for package in packages {
+        // error[E0658]: `let` expressions in this position are unstable
+        #[allow(clippy::collapsible_if)]
+        if let Some(name) = package.get("name")?.as_str() {
+            if name == crate_name {
+                return package.get("version")?.as_str().map(|s| s.to_string());
+            }
+        }
+    }
+
+    None
+}
