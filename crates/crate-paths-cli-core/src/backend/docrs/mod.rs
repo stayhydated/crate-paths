@@ -14,22 +14,33 @@ fn fetch_crate_all_items_html(
     crate_version: &str,
     app_user_agent: &str,
 ) -> Result<String, DocsrsBackendError> {
-    let html_url = format!(
-        "https://docs.rs/{}/{}/{}/all.html",
-        crate_name, crate_version, crate_name,
-    );
+    let base_url = format!("https://docs.rs/{}/{}/", crate_name, crate_version,);
 
     let client = Client::builder()
         .user_agent(app_user_agent)
         .build()
         .map_err(DocsrsBackendError::ClientBuild)?;
 
+    // Perform a HEAD request to follow redirects and get the final URL
     let response = client
-        .get(&html_url)
+        .head(&base_url)
         .send()
-        .map_err(|e| DocsrsBackendError::HttpGet(html_url.clone(), e))?
+        .map_err(|e| DocsrsBackendError::HttpGet(base_url.clone(), e))?
         .error_for_status()
-        .map_err(|e| DocsrsBackendError::HttpStatus(html_url.clone(), e))?;
+        .map_err(|e| DocsrsBackendError::HttpStatus(base_url.clone(), e))?;
+
+    let final_url = response.url();
+    let html_url = final_url
+        .join("all.html")
+        .expect("failed to construct all.html URL");
+    let html_url_str = html_url.to_string();
+
+    let response = client
+        .get(html_url)
+        .send()
+        .map_err(|e| DocsrsBackendError::HttpGet(html_url_str.clone(), e))?
+        .error_for_status()
+        .map_err(|e| DocsrsBackendError::HttpStatus(html_url_str.clone(), e))?;
 
     eprintln!("final URL: {}", response.url());
     if let Some(ct) = response.headers().get(reqwest::header::CONTENT_TYPE) {
@@ -47,7 +58,7 @@ fn fetch_crate_all_items_html(
 
     let raw_bytes = response
         .bytes()
-        .map_err(|e| DocsrsBackendError::HttpGet(html_url.clone(), e))?;
+        .map_err(|e| DocsrsBackendError::HttpGet(html_url_str.clone(), e))?;
 
     let html_bytes: Vec<u8> = match content_encoding.as_deref() {
         Some("zstd") => {
