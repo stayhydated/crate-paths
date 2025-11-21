@@ -17,16 +17,16 @@ license = "MIT OR Apache-2.0"
 publish = true
 readme = "README.md"
 repository = "https://github.com/stayhydated/crate-paths"
-version = "0.1.1"
+version = "0.1.2"
 rust-version = "1.91"
 
 [workspace.dependencies]
 Inflector = "0.11.4"
 check_keyword = "0.4.1"
 clap = "4.5.39"
-crate-paths = { path = "crates/crate-paths", version = "0.1.1" }
-crate-paths-cli-core = { path = "crates/crate-paths-cli-core", version = "0.1.1" }
-crate-paths-macros = { path = "crates/crate-paths-macros", version = "0.1.1" }
+crate-paths = { path = "crates/crate-paths", version = "0.1.2" }
+crate-paths-cli-core = { path = "crates/crate-paths-cli-core", version = "0.1.2" }
+crate-paths-macros = { path = "crates/crate-paths-macros", version = "0.1.2" }
 derive_more = "2.0.1"
 getset = "0.1.5"
 prettyplease = "0.2.33"
