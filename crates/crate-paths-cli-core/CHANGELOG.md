@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.3](https://github.com/stayhydated/crate-paths/compare/crate-paths-cli-core-v0.1.2...crate-paths-cli-core-v0.1.3) - 2025-11-21
+
+### Other
+
+- take advantage of docs redirects
+
 ## [0.1.2](https://github.com/stayhydated/crate-paths/compare/crate-paths-cli-core-v0.1.1...crate-paths-cli-core-v0.1.2) - 2025-11-21
 
 ### Other
