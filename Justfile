@@ -11,3 +11,6 @@ fmt:
 test:
   cargo test
   cd tests && just all
+
+test-publish:
+  cargo publish --workspace --dry-run --allow-dirty
