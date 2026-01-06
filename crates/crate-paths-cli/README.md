@@ -1,4 +1,5 @@
 tired of doing "something" like this?
+
 ```rs
 let struct_name = get();
 let field_name = get();
@@ -23,6 +24,7 @@ let tokens = quote! {
 ```
 
 This cli will generate definitions that will allow you to do:
+
 ```rs
 let struct_name = get();
 let field_name = get();

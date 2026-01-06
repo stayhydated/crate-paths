@@ -3,6 +3,7 @@
 [![Crates.io](https://img.shields.io/crates/v/crate-paths.svg)](https://crates.io/crates/crate-paths)
 
 # Projects
+
 - [crate-paths-cli](crates/crate-paths-cli)
 - [crate-paths-cli-core](crates/crate-paths-cli-core)
 - [crate-paths](crates/crate-paths)

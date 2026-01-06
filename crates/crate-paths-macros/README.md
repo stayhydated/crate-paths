@@ -1,10 +1,13 @@
 ## path!(...);
+
 Usage:
+
 ```rust
 path!(std::sync::Arc);
 ```
 
 This expands to
+
 ```rust
 #[allow(non_upper_case_globals)]
 pub const Arc: crate_paths::Path = {
@@ -16,6 +19,7 @@ pub const Arc: crate_paths::Path = {
 ```
 
 ## path_val!(...);
+
 Usage:
 
 ```rust
