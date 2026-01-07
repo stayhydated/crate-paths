@@ -5,7 +5,7 @@ use super::LocalBackendError;
 use crate::error::CoreError;
 use crate::item::ItemEntry;
 use crate::parser;
-use inflector::Inflector as _;
+use heck::ToSnakeCase as _;
 use std::path::PathBuf;
 use std::process::Command;
 

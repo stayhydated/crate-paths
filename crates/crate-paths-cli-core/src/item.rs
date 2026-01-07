@@ -1,7 +1,7 @@
 use crate::item_kind::ItemKind;
 use check_keyword::CheckKeyword as _;
 use getset::Getters;
-use inflector::Inflector as _;
+use heck::{ToSnakeCase as _, ToTitleCase as _};
 use serde::{Deserialize, Serialize};
 
 #[derive(Clone, Debug, Deserialize, Eq, Getters, Hash, PartialEq, Serialize)]
@@ -38,7 +38,7 @@ impl ItemEntry {
         let kinds_str = self
             .kinds
             .iter()
-            .map(|k| k.to_string().to_sentence_case().to_lowercase())
+            .map(|k| k.to_string().to_title_case().to_lowercase())
             .collect::<Vec<_>>()
             .join(" + ");
         let item_kind = format!("pub {} `{}`", kinds_str, self.item_name());

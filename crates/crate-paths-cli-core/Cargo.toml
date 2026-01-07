@@ -10,10 +10,10 @@ license.workspace = true
 repository.workspace = true
 
 [dependencies]
-Inflector = { workspace = true }
 check_keyword = { workspace = true }
 clap = { features = [ "derive" ], workspace = true }
 getset = { workspace = true }
+heck = { workspace = true }
 reqwest = { features = [ "blocking", "json", "zstd" ], workspace = true }
 # rustdoc-types = { workspace = true }
 scraper = { workspace = true }
