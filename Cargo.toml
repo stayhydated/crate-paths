@@ -5,8 +5,6 @@ members = [
   "crates/crate-paths-cli",
   "crates/crate-paths-cli-core",
   "crates/crate-paths-macros",
-  "crates/dummy-consumer-lib",
-  "example",
 ]
 resolver = "3"
 
@@ -29,6 +27,7 @@ crate-paths-cli-core = { path = "crates/crate-paths-cli-core", version = "0.1.3"
 crate-paths-macros = { path = "crates/crate-paths-macros", version = "0.1.3" }
 derive_more = "2.0.1"
 getset = "0.1.5"
+insta = "1.42.2"
 prettyplease = "0.2.33"
 proc-macro2 = "1.0.93"
 quote = "1.0.38"

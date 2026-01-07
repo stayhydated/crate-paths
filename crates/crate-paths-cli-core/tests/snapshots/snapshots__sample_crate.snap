@@ -1,0 +1,47 @@
+---
+source: crates/crate-paths-cli-core/tests/snapshots.rs
+expression: tree.to_rust_module_string()
+---
+#![allow(dead_code, non_upper_case_globals)]
+/// pub struct `Builder`
+pub const Builder: crate_paths::Path = crate_paths::Path::new("sample_crate::Builder");
+
+/// pub struct `Config`
+pub const Config: crate_paths::Path = crate_paths::Path::new("sample_crate::Config");
+
+/// pub enum `Error`
+pub const Error: crate_paths::Path = crate_paths::Path::new("sample_crate::Error");
+
+/// pub trait `Handler`
+pub const Handler: crate_paths::Path = crate_paths::Path::new("sample_crate::Handler");
+
+/// pub type alias `Result`
+pub const Result: crate_paths::Path = crate_paths::Path::new("sample_crate::Result");
+
+/// pub constant `VERSION`
+pub const VERSION: crate_paths::Path = crate_paths::Path::new("sample_crate::VERSION");
+
+/// pub macro `assert_valid`
+pub const assert_valid: crate_paths::Path = crate_paths::Path::new("sample_crate::assert_valid");
+
+/// pub function `init`
+pub const init: crate_paths::Path = crate_paths::Path::new("sample_crate::init");
+
+/// pub function `run`
+pub const run: crate_paths::Path = crate_paths::Path::new("sample_crate::run");
+pub mod utils {
+    /// pub struct `Helper`
+    pub const Helper: crate_paths::Path = crate_paths::Path::new("sample_crate::utils::Helper");
+
+    /// pub function `format`
+    pub const format: crate_paths::Path = crate_paths::Path::new("sample_crate::utils::format");
+    pub mod inner {
+        /// pub struct `Deep`
+        pub const Deep: crate_paths::Path =
+            crate_paths::Path::new("sample_crate::utils::inner::Deep");
+
+        /// pub enum `DeepError`
+        pub const DeepError: crate_paths::Path =
+            crate_paths::Path::new("sample_crate::utils::inner::DeepError");
+    }
+}

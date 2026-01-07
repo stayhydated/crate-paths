@@ -1,4 +1,4 @@
-use check_keyword::CheckKeyword;
+use check_keyword::CheckKeyword as _;
 use proc_macro::TokenStream;
 use quote::{format_ident, quote};
 
