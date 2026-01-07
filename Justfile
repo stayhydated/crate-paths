@@ -8,10 +8,23 @@ fmt:
     cargo fmt
     taplo fmt
     uvx mdformat .
+    uv format
+
+clippy:
+    cargo clippy --workspace --all-features
+
+check:
+    cargo check --workspace --all-features
 
 test:
-    cargo test
-    cd tests && just all
+    cargo test --workspace --all-features
 
 test-publish:
     cargo publish --workspace --dry-run --allow-dirty
+
+test-docs:
+    cargo doc --workspace --all-features --no-deps --open
+
+# test:
+#     cargo test
+#     cd tests && just all
