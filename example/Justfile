@@ -1,6 +1,0 @@
-set windows-shell := ["pwsh.exe", "-NoLogo", "-Command"]
-
-run:
-  cargo run -p crate-paths-cli -- -c serde -o src/paths/serde.rs # This will use the local backend
-  cargo run -p crate-paths-cli -- -c std -o src/paths/std.rs # This will use the rustup backend
-  cargo run -p crate-paths-cli -- -c tonic -o src/paths/tonic.rs # This will use the docsrs backend

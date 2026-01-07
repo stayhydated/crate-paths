@@ -1,0 +1,10 @@
+---
+source: crates/crate-paths-cli-core/tests/snapshots.rs
+expression: tree.to_string_list()
+---
+• Deserialize [Trait, ProcDerive]
+• Serialize [Trait, ProcDerive]
+• Serializer [Struct]
+• de::Error [Struct]
+• de::Visitor [Trait]
+• ser::SerializeStruct [Trait]

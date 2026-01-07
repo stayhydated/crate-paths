@@ -1,0 +1,25 @@
+---
+source: crates/crate-paths-cli-core/tests/snapshots.rs
+expression: tree.to_rust_module_string()
+---
+#![allow(dead_code, non_upper_case_globals)]
+/// pub trait + proc derive `Deserialize`
+pub const Deserialize: crate_paths::Path = crate_paths::Path::new("derive_crate::Deserialize");
+
+/// pub trait + proc derive `Serialize`
+pub const Serialize: crate_paths::Path = crate_paths::Path::new("derive_crate::Serialize");
+
+/// pub struct `Serializer`
+pub const Serializer: crate_paths::Path = crate_paths::Path::new("derive_crate::Serializer");
+pub mod de {
+    /// pub struct `Error`
+    pub const Error: crate_paths::Path = crate_paths::Path::new("derive_crate::de::Error");
+
+    /// pub trait `Visitor`
+    pub const Visitor: crate_paths::Path = crate_paths::Path::new("derive_crate::de::Visitor");
+}
+pub mod ser {
+    /// pub trait `SerializeStruct`
+    pub const SerializeStruct: crate_paths::Path =
+        crate_paths::Path::new("derive_crate::ser::SerializeStruct");
+}

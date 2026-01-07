@@ -24,6 +24,5 @@ test-publish:
 test-docs:
     cargo doc --workspace --all-features --no-deps --open
 
-# test:
-#     cargo test
-#     cd tests && just all
+snapshot-review:
+    cargo insta review

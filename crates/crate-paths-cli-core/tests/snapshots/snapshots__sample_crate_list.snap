@@ -1,0 +1,17 @@
+---
+source: crates/crate-paths-cli-core/tests/snapshots.rs
+expression: tree.to_string_list()
+---
+• Builder [Struct]
+• Config [Struct]
+• Error [Enum]
+• Handler [Trait]
+• Result [TypeAlias]
+• VERSION [Constant]
+• assert_valid [Macro]
+• init [Function]
+• run [Function]
+• utils::Helper [Struct]
+• utils::format [Function]
+• utils::inner::Deep [Struct]
+• utils::inner::DeepError [Enum]
