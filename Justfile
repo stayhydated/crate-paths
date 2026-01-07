@@ -8,7 +8,6 @@ fmt:
     cargo fmt
     taplo fmt
     uvx mdformat .
-    uv format
 
 clippy:
     cargo clippy --workspace --all-features
