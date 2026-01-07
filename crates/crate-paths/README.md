@@ -15,12 +15,4 @@ which will expand to:
 let a = std::sync::Arc::new("b");
 ```
 
-Optionally, exposes macros from [crate-paths-macro](../crate-paths-macro)
-
-When the `macro` feature is enabled
-
-```toml
-[features]
-default = []
-macro = ["dep:crate-paths-macro"]
-```
+Optionally, exposes macros from [crate-paths-macro](../crate-paths-macros/README.md) when the `macro` feature is enabled

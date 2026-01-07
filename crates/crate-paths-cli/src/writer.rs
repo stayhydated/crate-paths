@@ -4,7 +4,6 @@ use crate_paths_cli_core::tree::ModTree;
 use std::fs;
 use std::io;
 use std::path::Path;
-use std::path::PathBuf;
 use std::process::Command;
 use thiserror::Error;
 
@@ -23,7 +22,7 @@ pub enum WriterError {
 pub fn write_items(
     crate_name: &str,
     items: Vec<ItemEntry>,
-    output_path: &PathBuf,
+    output_path: &Path,
     skip_init: bool,
 ) -> Result<(), CratePathCliError> {
     let definition = ModTree::new(items).to_rust_module_string();
@@ -37,7 +36,7 @@ pub fn write_items(
     Ok(())
 }
 
-fn write_to_file(definition: String, output_path: &PathBuf) -> Result<(), WriterError> {
+fn write_to_file(definition: String, output_path: &Path) -> Result<(), WriterError> {
     fs::write(output_path, definition).map_err(WriterError::FileWrite)?;
     Ok(())
 }
