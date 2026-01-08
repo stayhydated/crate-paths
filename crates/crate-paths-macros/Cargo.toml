@@ -5,12 +5,10 @@ description = """
 """
 readme = "README.md"
 version.workspace = true
-publish.workspace = true
 edition.workspace = true
 license.workspace = true
-categories.workspace = true
+publish.workspace = true
 repository.workspace = true
-keywords = [ "syn", "path" ]
 
 [lib]
 proc-macro = true

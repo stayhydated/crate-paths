@@ -3,10 +3,11 @@ name = "crate-paths-cli-core"
 description = """
     Core library for crate-paths-cli
 """
+readme = "README.md"
 version.workspace = true
-publish.workspace = true
 edition.workspace = true
 license.workspace = true
+publish.workspace = true
 repository.workspace = true
 
 [dependencies]
