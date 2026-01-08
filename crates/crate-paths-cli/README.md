@@ -17,6 +17,7 @@ cargo crate-paths --crate-name std --output-path ./paths
 ```
 
 ### Backends
+
 - **Auto (default)**: Cycles through the backends to find the crate. going from `rustup` -> `local` -> `docsrs`.
 - **`--backend rustup`**: Force usage of Rustup source (for std lib).
 - **`--backend local`**: Analyze a local crate in the workspace.

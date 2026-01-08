@@ -10,37 +10,39 @@ The primary tool in this ecosystem is the **CLI**, which generates a mirroring m
 
 ## Workflow
 
-1.  **Install the CLI**
-    ```bash
-    cargo install crate-paths-cli
-    ```
+1. **Install the CLI**
 
-2.  **Generate Paths**
-    Run the CLI against a crate (e.g., `serde`) to generate a path definition file.
-    ```bash
-    cargo crate-paths --crate-name serde --output-path ./serde_paths.rs
-    ```
+   ```bash
+   cargo install crate-paths-cli
+   ```
 
-3.  **Output (Example)**
-    The generated code mirrors the crate's structure, providing `crate_paths::Path` constants that can be used directly in `quote!`.
+1. **Generate Paths**
+   Run the CLI against a crate (e.g., `serde`) to generate a path definition file.
 
-    ```rust
-    // ./serde_paths.rs
-    pub const Deserialize: crate_paths::Path = crate_paths::Path::new("serde::Deserialize");
-    pub const Serialize: crate_paths::Path = crate_paths::Path::new("serde::Serialize");
+   ```bash
+   cargo crate-paths --crate-name serde --output-path ./serde_paths.rs
+   ```
 
-    // ...
+1. **Output (Example)**
+   The generated code mirrors the crate's structure, providing `crate_paths::Path` constants that can be used directly in `quote!`.
 
-    ```
+   ```rust
+   // ./serde_paths.rs
+   pub const Deserialize: crate_paths::Path = crate_paths::Path::new("serde::Deserialize");
+   pub const Serialize: crate_paths::Path = crate_paths::Path::new("serde::Serialize");
 
-4.  **Usage in Procedural Macros**
-    Use the generated paths in your `quote!` macros. They implement `ToTokens` and work in `const` contexts!
+   // ...
 
-    ```rust
-    use serde_paths::{Deserialize, Serialize};
-    
-    let tokens = quote! {
-        #[derive(#Serialize, #Deserialize)]
-        struct Foo;
-    };
-    ```
+   ```
+
+1. **Usage in Procedural Macros**
+   Use the generated paths in your `quote!` macros. They implement `ToTokens` and work in `const` contexts!
+
+   ```rust
+   use serde_paths::{Deserialize, Serialize};
+
+   let tokens = quote! {
+       #[derive(#Serialize, #Deserialize)]
+       struct Foo;
+   };
+   ```
