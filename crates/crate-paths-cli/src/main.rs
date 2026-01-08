@@ -1,5 +1,6 @@
 use clap::{Parser, Subcommand, ValueEnum};
 use crate_paths_cli::error::CratePathCliError;
+use heck::ToSnakeCase;
 use std::path::PathBuf;
 
 #[derive(Parser)]
@@ -51,7 +52,8 @@ fn main() -> Result<(), CratePathCliError> {
     let CargoCommand::CratePaths(args) = cli.command;
 
     let output_path = if args.output_path.extension().is_none() {
-        args.output_path.join(format!("{}.rs", args.crate_name))
+        args.output_path
+            .join(format!("{}.rs", args.crate_name.to_snake_case()))
     } else {
         args.output_path
     };
