@@ -1,58 +1,37 @@
-tired of doing "something" like this?
+# crate-paths-cli
 
-```rs
-let struct_name = get();
-let field_name = get();
-let field_type = get();
+A Cargo subcommand to generate path trees from Rust crates.
 
-let tokens = quote! {
-    #[derive(Clone, serde::Serialize, serde::Deserialize)]
-    pub struct #struct_name {
-        #field_name: std::sync::Arc<std::sync::RwLock<std::collections::HashMap<String, #field_type>>>,
-        metrics: std::sync::Arc<std::sync::atomic::AtomicU64>,
-    }
+## Installation
 
-    impl #struct_name {
-        pub fn new() -> Self {
-            Self {
-                #field_name: std::sync::Arc::new(std::sync::RwLock::new(std::collections::HashMap::new())),
-                metrics: std::sync::Arc::new(std::sync::atomic::AtomicU64::new(0)),
-            }
-        }
-    }
-};
+```bash
+cargo install crate-paths-cli
 ```
 
-This cli will generate definitions that will allow you to do:
+## Usage
 
-```rs
-let struct_name = get();
-let field_name = get();
-let field_type = get();
+Generate a path tree for a crate:
 
-use serde_crate_paths::{Serialize, Deserialize};
-use std_crate_paths::sync::{Arc, RwLock};
-use std_crate_paths::sync::atomic::AtomicU64;
-use std_crate_paths::collections::HashMap;
-
-let tokens = quote! {
-    #[derive(Clone, #Serialize, #Deserialize)]
-    pub struct #struct_name {
-        #field_name: #Arc<#RwLock<#HashMap<String, #field_type>>>,
-        metrics: #Arc<#AtomicU64>,
-    }
-
-    impl #struct_name {
-        pub fn new() -> Self {
-            Self {
-                #field_name: #Arc::new(#RwLock::new(#HashMap::new())),
-                metrics: #Arc::new(#AtomicU64::new(0)),
-            }
-        }
-    }
-};
+```bash
+cargo crate-paths --crate-name std --output-path ./std_paths.rs
 ```
 
-## Examples
+### Output Path
 
-See a basic example in [example](../../example), **whose Justfile contains information about the backend used.**
+- If `--output-path` has a file extension, writes directly to that file.
+- If no extension, treats it as a directory and writes to `{crate_name}.rs` within it.
+
+```bash
+# Writes to ./std_paths.rs
+cargo crate-paths --crate-name std --output-path ./std_paths.rs
+
+# Writes to ./generated/std.rs
+cargo crate-paths --crate-name std --output-path ./generated
+```
+
+### Backends
+
+- **Auto (default)**: Cycles through the backends to find the crate. going from `rustup` -> `local` -> `docsrs`.
+- **`--backend rustup`**: Force usage of Rustup source (for std lib).
+- **`--backend local`**: Analyze a local crate in the workspace.
+- **`--backend docsrs`**: Fetch metadata from docs.rs.

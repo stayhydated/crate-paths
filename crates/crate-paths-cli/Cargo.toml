@@ -5,21 +5,19 @@ description = """
 """
 readme = "README.md"
 version.workspace = true
-publish.workspace = true
 edition.workspace = true
 license.workspace = true
+publish.workspace = true
 repository.workspace = true
-categories.workspace = true
-keywords = [ "syn", "path", "crate" ]
 
-[features]
-default = [ "transitive" ]
-specific = [  ]
-transitive = [  ]
+[[bin]]
+name = "cargo-crate-paths"
+path = "src/main.rs"
 
 [dependencies]
 clap = { features = [ "derive" ], workspace = true }
 crate-paths-cli-core = { workspace = true }
+heck = { workspace = true }
 prettyplease = { workspace = true }
 syn = { workspace = true }
 thiserror = { workspace = true }
