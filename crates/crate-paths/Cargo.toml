@@ -4,11 +4,12 @@ description = """
     Required library for crate-paths-cli's output
 """
 readme = "README.md"
-version.workspace = true
 edition.workspace = true
 license.workspace = true
 publish.workspace = true
 repository.workspace = true
+rust-version.workspace = true
+version.workspace = true
 keywords = [ "syn", "path" ]
 
 [features]
