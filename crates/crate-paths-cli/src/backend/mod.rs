@@ -9,42 +9,29 @@ pub fn run_docsrs(
     crate_name: &str,
     crate_version: &str,
     output_path: &Path,
-    skip_init: bool,
 ) -> Result<(), CratePathCliError> {
     let items = backend::docrs::process(crate_name, crate_version, consts::APP_USER_AGENT)?;
-    writer::write_items(crate_name, items, output_path, skip_init)?;
+    writer::write_items(crate_name, items, output_path)?;
     Ok(())
 }
 
-pub fn run_local(
-    crate_name: &str,
-    output_path: &Path,
-    skip_init: bool,
-) -> Result<(), CratePathCliError> {
+pub fn run_local(crate_name: &str, output_path: &Path) -> Result<(), CratePathCliError> {
     let items = backend::local::process(crate_name)?;
-    writer::write_items(crate_name, items, output_path, skip_init)?;
+    writer::write_items(crate_name, items, output_path)?;
     Ok(())
 }
 
-pub fn run_rustup(
-    crate_name: &str,
-    output_path: &Path,
-    skip_init: bool,
-) -> Result<(), CratePathCliError> {
+pub fn run_rustup(crate_name: &str, output_path: &Path) -> Result<(), CratePathCliError> {
     let items = backend::rustup::process(crate_name)?;
-    writer::write_items(crate_name, items, output_path, skip_init)?;
+    writer::write_items(crate_name, items, output_path)?;
     Ok(())
 }
 
-pub fn run_auto(
-    crate_name: &str,
-    output_path: &Path,
-    skip_local: bool,
-) -> Result<(), CratePathCliError> {
+pub fn run_auto(crate_name: &str, output_path: &Path) -> Result<(), CratePathCliError> {
     eprintln!("Attempting Rustup backend for crate: {}", crate_name);
     match backend::rustup::process(crate_name) {
         Ok(items) => {
-            writer::write_items(crate_name, items, output_path, true)?;
+            writer::write_items(crate_name, items, output_path)?;
             return Ok(());
         },
         Err(e) => {
@@ -52,17 +39,15 @@ pub fn run_auto(
         },
     }
 
-    if !skip_local {
-        eprintln!("Attempting Local backend for crate: {}", crate_name);
-        match backend::local::process(crate_name) {
-            Ok(items) => {
-                writer::write_items(crate_name, items, output_path, true)?;
-                return Ok(());
-            },
-            Err(e) => {
-                eprintln!("Local backend failed: {}. Trying next backend...", e);
-            },
-        }
+    eprintln!("Attempting Local backend for crate: {}", crate_name);
+    match backend::local::process(crate_name) {
+        Ok(items) => {
+            writer::write_items(crate_name, items, output_path)?;
+            return Ok(());
+        },
+        Err(e) => {
+            eprintln!("Local backend failed: {}. Trying next backend...", e);
+        },
     }
 
     let crate_version =
@@ -74,7 +59,7 @@ pub fn run_auto(
     );
     match backend::docrs::process(crate_name, &crate_version, consts::APP_USER_AGENT) {
         Ok(items) => {
-            writer::write_items(crate_name, items, output_path, true)?;
+            writer::write_items(crate_name, items, output_path)?;
             Ok(())
         },
         Err(e) => {
