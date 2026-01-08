@@ -13,7 +13,20 @@ cargo install crate-paths-cli
 Generate a path tree for a crate:
 
 ```bash
-cargo crate-paths --crate-name std --output-path ./paths
+cargo crate-paths --crate-name std --output-path ./std_paths.rs
+```
+
+### Output Path
+
+- If `--output-path` has a file extension, writes directly to that file.
+- If no extension, treats it as a directory and writes to `{crate_name}.rs` within it.
+
+```bash
+# Writes to ./std_paths.rs
+cargo crate-paths --crate-name std --output-path ./std_paths.rs
+
+# Writes to ./generated/std.rs
+cargo crate-paths --crate-name std --output-path ./generated
 ```
 
 ### Backends

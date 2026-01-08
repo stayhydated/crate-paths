@@ -11,19 +11,19 @@ pub fn run_docsrs(
     output_path: &Path,
 ) -> Result<(), CratePathCliError> {
     let items = backend::docrs::process(crate_name, crate_version, consts::APP_USER_AGENT)?;
-    writer::write_items(crate_name, items, output_path)?;
+    writer::write_items(items, output_path)?;
     Ok(())
 }
 
 pub fn run_local(crate_name: &str, output_path: &Path) -> Result<(), CratePathCliError> {
     let items = backend::local::process(crate_name)?;
-    writer::write_items(crate_name, items, output_path)?;
+    writer::write_items(items, output_path)?;
     Ok(())
 }
 
 pub fn run_rustup(crate_name: &str, output_path: &Path) -> Result<(), CratePathCliError> {
     let items = backend::rustup::process(crate_name)?;
-    writer::write_items(crate_name, items, output_path)?;
+    writer::write_items(items, output_path)?;
     Ok(())
 }
 
@@ -31,7 +31,7 @@ pub fn run_auto(crate_name: &str, output_path: &Path) -> Result<(), CratePathCli
     eprintln!("Attempting Rustup backend for crate: {}", crate_name);
     match backend::rustup::process(crate_name) {
         Ok(items) => {
-            writer::write_items(crate_name, items, output_path)?;
+            writer::write_items(items, output_path)?;
             return Ok(());
         },
         Err(e) => {
@@ -42,7 +42,7 @@ pub fn run_auto(crate_name: &str, output_path: &Path) -> Result<(), CratePathCli
     eprintln!("Attempting Local backend for crate: {}", crate_name);
     match backend::local::process(crate_name) {
         Ok(items) => {
-            writer::write_items(crate_name, items, output_path)?;
+            writer::write_items(items, output_path)?;
             return Ok(());
         },
         Err(e) => {
@@ -59,7 +59,7 @@ pub fn run_auto(crate_name: &str, output_path: &Path) -> Result<(), CratePathCli
     );
     match backend::docrs::process(crate_name, &crate_version, consts::APP_USER_AGENT) {
         Ok(items) => {
-            writer::write_items(crate_name, items, output_path)?;
+            writer::write_items(items, output_path)?;
             Ok(())
         },
         Err(e) => {

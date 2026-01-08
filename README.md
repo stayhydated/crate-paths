@@ -23,6 +23,13 @@ The primary tool in this ecosystem is the **CLI**, which generates a mirroring m
    cargo crate-paths --crate-name serde --output-path ./serde_paths.rs
    ```
 
+   If `--output-path` has no file extension, it's treated as a directory and the output is written to `{crate_name}.rs` within it:
+
+   ```bash
+   # Writes to ./generated/serde.rs
+   cargo crate-paths --crate-name serde --output-path ./generated
+   ```
+
 1. **Output (Example)**
    The generated code mirrors the crate's structure, providing `crate_paths::Path` constants that can be used directly in `quote!`.
 

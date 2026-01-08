@@ -12,11 +12,7 @@ pub enum WriterError {
     FileWrite(#[source] io::Error),
 }
 
-pub fn write_items(
-    _crate_name: &str,
-    items: Vec<ItemEntry>,
-    output_path: &Path,
-) -> Result<(), CratePathCliError> {
+pub fn write_items(items: Vec<ItemEntry>, output_path: &Path) -> Result<(), CratePathCliError> {
     let definition = ModTree::new(items).to_rust_module_string();
     fs::write(output_path, definition).map_err(WriterError::FileWrite)?;
     Ok(())
