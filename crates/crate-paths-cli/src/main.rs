@@ -1,6 +1,6 @@
 use clap::{Parser, Subcommand, ValueEnum};
 use crate_paths_cli::error::CratePathCliError;
-use heck::ToSnakeCase;
+use heck::ToSnakeCase as _;
 use std::path::PathBuf;
 
 #[derive(Parser)]
