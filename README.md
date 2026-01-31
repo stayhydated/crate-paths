@@ -7,6 +7,7 @@
 Type-safe path constants for Rust code generation.
 
 `crate-paths` gives you:
+
 - `crate_paths::Path`, a `const`-friendly path type that implements `ToTokens`.
 - A CLI that generates a module tree mirroring a crate's public items.
 - Optional procedural macros for inline, compile-time-validated path constants.
@@ -28,13 +29,13 @@ crate-paths = "*"
 
 ## Quickstart
 
-1) Generate a path file
+1. Generate a path file
 
 ```bash
 cargo crate-paths --crate-name serde --output-path ./generated
 ```
 
-2) Use the generated constants in a macro
+2. Use the generated constants in a macro
 
 ```rust
 use generated::serde::{Deserialize, Serialize};
@@ -75,6 +76,7 @@ const MY_PATH: crate_paths::Path = path_val!(std::collections::HashMap);
 ## Backends
 
 The CLI can source item lists from multiple places:
+
 - **rustup**: reads stdlib docs from `rustup doc --path`.
 - **local**: runs `cargo doc --workspace` and parses `target/doc/<crate>/all.html`.
 - **docs.rs**: fetches `all.html` from docs.rs (network required).
@@ -93,6 +95,7 @@ The default mode auto-tries `rustup` -> `local` -> `docs.rs`.
 ## Development
 
 Common tasks via `just`:
+
 - `just fmt`
 - `just test`
 - `just clippy`
