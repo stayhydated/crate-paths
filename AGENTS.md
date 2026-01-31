@@ -9,25 +9,32 @@
 ## Architecture Documentation Index
 
 | Crate | Link to Architecture Doc | Purpose |
-|-------|-------------------|---------|
-| `crate-paths` | [Architecture](crates/crate-paths/docs/ARCHITECTURE.md) | Runtime library and `Path` definition. |
-| `crate-paths-macros` | [Architecture](crates/crate-paths-macros/docs/ARCHITECTURE.md) | Optional procedural macros. |
-| `crate-paths-cli` | [Architecture](crates/crate-paths-cli/docs/ARCHITECTURE.md) | The `cargo crate-paths` command-line tool. |
-| `crate-paths-cli-core` | [Architecture](crates/crate-paths-cli-core/docs/ARCHITECTURE.md) | Core logic for scraping and generation. |
+| --- | --- | --- |
+| **Core** | | |
+| `crate-paths` | [Architecture](crates/crate-paths/docs/ARCHITECTURE.md) | Runtime `Path` type and `ToTokens` implementation. |
+| `crate-paths-macros` | [Architecture](crates/crate-paths-macros/docs/ARCHITECTURE.md) | Optional procedural macros for inline path constants. |
+| **CLI Tool** | | |
+| `crate-paths-cli` | [Architecture](crates/crate-paths-cli/docs/ARCHITECTURE.md) | Primary developer-facing CLI (`cargo crate-paths`). |
+| **Tooling Internals** | | |
+| `crate-paths-cli-core` | [Architecture](crates/crate-paths-cli-core/docs/ARCHITECTURE.md) | Core logic for scraping, parsing, and code generation. |
 
 ## Crate Descriptions
 
 ### Core Layers
 
-- **`crate-paths`**: The required runtime library. It defines the `Path` struct and implements `ToTokens`, allowing constants to be used directly in `quote!`.
-- **`crate-paths-macros`**: An optional library providing procedural macros for the ecosystem.
+- **`crate-paths`**: The user-facing library. Defines `Path` and implements `ToTokens` so generated constants can be used directly in `quote!`.
+- **`crate-paths-macros`**: Provides `path!` and `path_val!` for compile-time validated path constants.
 
-### Tooling
+### CLI Tool
 
-- **`crate-paths-cli`**: The binary installed by users. It serves as the entry point for generating path files.
-- **`crate-paths-cli-core`**: The library containing the core logic for the CLI. It handles crate analysis, documentation scraping, and code generation.
+- **`crate-paths-cli`**: The Cargo subcommand that fetches crate docs, generates the path tree, and writes the output file.
+
+### Tooling Internals
+
+- **`crate-paths-cli-core`**: Backend fetching (rustup/local/docs.rs), HTML parsing, item modeling, and module tree rendering.
 
 ## Development
 
 - **Rust**: Use `cargo` for building, testing, and running Rust code.
+- **Task runner**: Use `just` for common commands (fmt, test, clippy, docs).
 - **Testing**: Use [insta](https://insta.rs/) for snapshot tests where appropriate.

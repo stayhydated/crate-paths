@@ -1,16 +1,24 @@
 # Architecture
 
-## Overview
+## Purpose
+`crate-paths` provides a small, `const`-friendly path type that can be used in Rust code generation. The goal is to create `syn::Path`-compatible constants that can be passed directly into `quote!` and other token-building APIs.
 
-`crate-paths` is a lightweight wrapper crate designed to bridge the gap between `syn::Path` and `quote::ToTokens` in a way that allows for easier code generation of paths.
+## Core type
+- `Path<'a>`: wraps a `&'a str` and represents a fully-qualified Rust path (for example, `std::sync::Arc`).
+- `Path::new`: `const fn` constructor so values can live in `const` contexts.
+- `quote::ToTokens` implementation: parses the string into `syn::Path` at token emission time and forwards to `syn`'s `ToTokens`.
 
-It serves as a `syn::Path`-like representation, primarily because it can be constructed and used in a `const` context, which `syn::Path` cannot.
+## Data flow
+1. User creates a `Path` value (typically via the CLI output or macros).
+2. The `Path` is passed to a macro or `quote!` invocation.
+3. `ToTokens` parses the stored string into `syn::Path` and emits tokens.
 
-## Design
+## Invariants and constraints
+- The stored string must parse as a valid Rust path. Invalid values will panic during tokenization (`syn::parse_str` fails).
+- `Path` is intentionally minimal: it stores only the string form and delegates parsing to `syn`.
 
-The core design revolves around the `Path` struct, which wraps a string representation of a path (e.g., `std::sync::Arc`). This struct implements `ToTokens`, parsing the string into a `syn::Path` at macro expansion time.
+## Feature flags
+- `macros`: re-exports the `crate-paths-macros` procedural macros for convenience.
 
-### Key Components
-
-- **`Path<'a>`**: The main struct. Wraps a `&'a str`.
-- **`ToTokens` impl**: Parses the string into `syn::Path` and emits it.
+## Extension points
+- Additional constructors or validation helpers can be added here if the project needs eager validation or richer metadata.
